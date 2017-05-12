@@ -6,6 +6,6 @@ var dotenv = require('dotenv').config({
 var gulp = require('gulp');
 var shell = require('gulp-shell')
 
-gulp.task('deploy', shell.task(
+gulp.task('deploy', ['cname'], shell.task(
   ['git subtree push --prefix public origin gh-pages']
 ))
