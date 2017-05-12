@@ -1,0 +1,33 @@
+doctype html
+html(lang="no")
+
+  //- Config Variables
+
+
+  head
+    title #{title}
+
+    //- Meta
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- CSS
+    link(rel='stylesheet', href='css/main.css')
+    //- JS
+    script(src="js/main.js")
+
+  body
+    // Module: Header
+    .header
+      .header--logo
+        p 🏴
+      .header--nav
+        ul
+          li Menu Item I
+          li Menu Item II
+          li Menu Item III
+
+    block content
+
+    // Module: Footer
+    .footer
+      p FooterContent
