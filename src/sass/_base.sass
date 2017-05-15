@@ -1,6 +1,13 @@
 @import base/reset
 @import base/form-reset
 
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
 #hero-animation
   position: absolute
   background-image: url("../img/bg.png")
@@ -9,6 +16,9 @@
   background-repeat: no-repeat
   width: 100vw
   height: 100vh
+  opacity: 0
+  animation: 400ms ease-in-out 1s 1 fadeIn
+  animation-fill-mode: forwards
 
   &::after
     content: " "

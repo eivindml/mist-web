@@ -206,6 +206,18 @@ select[multiple] {
   /* Move the label to the top */
   vertical-align: top; }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 #hero-animation {
   position: absolute;
   background-image: url("../img/bg.png");
@@ -213,7 +225,12 @@ select[multiple] {
   background-position: center -150px;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  opacity: 0;
+  -webkit-animation: 400ms ease-in-out 1s 1 fadeIn;
+          animation: 400ms ease-in-out 1s 1 fadeIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
   #hero-animation::after {
     content: " ";
     position: absolute;
@@ -347,7 +364,10 @@ a {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 26px 0; }
+  padding: 26px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .header--logo img {
     height: 39px; }
   .header--nav ul {
@@ -403,11 +423,11 @@ a {
     .project--illustration img {
       width: 100%;
       z-index: -1;
-      -webkit-transform: scale(0.76, 0.76) translateY(-5px);
-              transform: scale(0.76, 0.76) translateY(-5px); }
+      -webkit-transform: scale(0.71, 0.73) translateY(-5px) translateX(-4px);
+              transform: scale(0.71, 0.73) translateY(-5px) translateX(-4px); }
     .project--illustration::after {
       content: " ";
-      background-image: url("../img/drawn-macbook.png");
+      background-image: url("../img/frame-macbook.png");
       background-size: 100%;
       background-position: center center;
       background-repeat: no-repeat;
