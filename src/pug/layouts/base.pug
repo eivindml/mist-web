@@ -2,7 +2,7 @@ doctype html
 html(lang="no")
 
   //- Config Variables
-
+  - title = "mist"
 
   head
     title #{title}
@@ -11,22 +11,127 @@ html(lang="no")
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     //- CSS
+    link(rel='stylesheet', href='fonts/fonts.css')
     link(rel='stylesheet', href='css/main.css')
     //- JS
     script(src="js/main.js")
 
   body
-    // Module: Header
-    .header
-      .header--logo
-        p 🏴
-      .header--nav
+    .l-wrap
+
+      .section.section__hero
+
+        // Module: Header
+        .header
+          .header--logo
+            img(src="img/logo.svg")
+          .header--nav#nav
+            ul
+              li: a(href="#projects") projects
+              li: a(href="#contact") contact
+              li: a(href="/me") /me
+              li: a(href="/now") /now
+
+        // Module: Hero
+        .hero
+          .hero--text
+            .l-grid
+              .l-grid--col-1
+              .l-grid--col-4
+                p Hi 👋🏻, my name is Eivind Lindbråten, and I'm a Norwegian freelancer who loves to play around with code and build stuff. Current area of focus are web and iOS projects — but most of all I like to work on fun, creative and weird projects.
+
+          .hero--arrow
+            img(src="img/arrow.gif")
+
+      .section.section__projects#projects
+
+        .l-grid.l-grid__centered
+          .l-grid--col-2
+          .l-grid--col-2
+
+            // Module: Projects Intro
+            .projects-intro
+              p Shown below are some of the projects I have built, either self initated or for clients.👇🏻
+
+        .l-grid
+          .l-grid--col-6
+
+            // Module
+            .project
+              .project--col
+                .project--illustration
+                  img(src="img/sample-project.gif")
+              .project--col
+                .project--title
+                  h1 tenkekassa.no
+                .project--description
+                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
+                .project--button
+                  a(href="#")
+                    .button 
+                      p read more
+
+          .l-grid--col-6
+
+            // Module
+            .project.project__even
+              .project--col
+                .project--illustration
+                  img(src="img/landscape.gif")
+              .project--col
+                .project--title
+                  h1 tenkekassa.no
+                .project--description
+                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
+                .project--button
+                  a(href="#")
+                    .button 
+                      p read more
+
+          .l-grid--col-6
+
+            // Module
+            .project
+              .project--col
+                .project--illustration
+                  img(src="img/sample-project.gif")
+              .project--col
+                .project--title
+                  h1 tenkekassa.no
+                .project--description
+                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
+                .project--button
+                  a(href="#")
+                    .button 
+                      p read more
+
+      .section.section__contact#contact
+
+        .l-grid
+          .l-grid--col-1
+          .l-grid--col-4
+            // Module: Contact
+            .contact
+              p If you think we should work together, please contact me.
+              a(href="#") eivind@madebymist.com
+
+      // Module: Footer
+      .footer
         ul
-          li Menu Item I
-          li Menu Item II 
+          li: a(href="#") github.com/eivindml
+          li: a(href="#") twitter.com/eivindml
+          li: a(href="#") eivind@madebymist.com
 
-    block content
+      script.
+        function scrollToListener(event) {
+          event.preventDefault();
+          var attribute = this.getAttribute('href');
+          var element = document.getElementById(attribute.substring(1));
+          var rect = element.getBoundingClientRect();
+          scrollToPosition(rect.top, 300);
+        }
 
-    // Module: Footer
-    .footer
-      p FooterContent
+        var anchors = document.getElementById("nav").getElementsByTagName("a");
+        for (var i = 0; i < anchors.length ; i++) {
+          anchors[i].addEventListener("click", scrollToListener);
+        }

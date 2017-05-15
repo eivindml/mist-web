@@ -2,7 +2,26 @@
 @import base/form-reset
 
 body
+  background-color: $lightColor
+  color: $darkColor
+  font-family: "Roboto Mono", monospace
+  font-weight: 300
+  font-size: 17px
+  line-height: 26px
+  background-image: url("../img/bg.png")
+  background-size: 140%
+  background-position: center -150px
+  background-repeat: no-repeat
 
 h1
+  font-weight: 500
+  font-size: 28px
+  line-height: 39px
+  margin-bottom: $baselineHeight * 2
 
-p
+a
+  color: $darkColor
+  transition: all 200ms ease-in-out
+
+  &:hover
+    color: $accentColor

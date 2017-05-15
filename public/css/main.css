@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* Colors */
 /* Dimensions */
+/* Grid settings */
+/* Media queries */
 /* Based on SMACSS, Naming based on BEM with own syntax */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -204,19 +206,122 @@ select[multiple] {
   /* Move the label to the top */
   vertical-align: top; }
 
-.l-float-left {
-  float: left; }
+body {
+  background-color: #F5F4EC;
+  color: #111210;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 26px;
+  background-image: url("../img/bg.png");
+  background-size: 140%;
+  background-position: center -150px;
+  background-repeat: no-repeat; }
 
-.l-float-right {
-  float: right; }
+h1 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 39px;
+  margin-bottom: 26px; }
 
-.l-clear {
-  clear: both; }
+a {
+  color: #111210;
+  transition: all 200ms ease-in-out; }
+  a:hover {
+    color: #DD452A; }
 
-.l-constrained {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px; }
+.section__hero {
+  height: 100vh;
+  position: relative; }
+
+.section__projects {
+  text-align: center;
+  padding-top: 52px; }
+  .section__projects .projects-intro {
+    margin-bottom: 273px; }
+
+.section__contact {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.l-wrap {
+  width: 100%;
+  max-width: 1196px;
+  margin: 0 auto; }
+
+.l-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 52px;
+  grid-row-gap: 273px;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr); }
+  .l-grid--col {
+    -ms-grid-column-span: 6;
+    -ms-grid-column: auto;
+        grid-column: auto/span 6; }
+    .l-grid--col-1 {
+      -ms-grid-column-span: 1;
+      -ms-grid-column: auto;
+          grid-column: auto/span 1; }
+      @media (max-width: 767px) {
+        .l-grid--col-1 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
+    .l-grid--col-2 {
+      -ms-grid-column-span: 2;
+      -ms-grid-column: auto;
+          grid-column: auto/span 2; }
+      @media (max-width: 767px) {
+        .l-grid--col-2 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
+    .l-grid--col-3 {
+      -ms-grid-column-span: 3;
+      -ms-grid-column: auto;
+          grid-column: auto/span 3; }
+      @media (max-width: 767px) {
+        .l-grid--col-3 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
+    .l-grid--col-4 {
+      -ms-grid-column-span: 4;
+      -ms-grid-column: auto;
+          grid-column: auto/span 4; }
+      @media (max-width: 767px) {
+        .l-grid--col-4 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
+    .l-grid--col-5 {
+      -ms-grid-column-span: 5;
+      -ms-grid-column: auto;
+          grid-column: auto/span 5; }
+      @media (max-width: 767px) {
+        .l-grid--col-5 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
+    .l-grid--col-6 {
+      -ms-grid-column-span: 6;
+      -ms-grid-column: auto;
+          grid-column: auto/span 6; }
+      @media (max-width: 767px) {
+        .l-grid--col-6 {
+          -ms-grid-column-span: 6;
+          -ms-grid-column: auto;
+              grid-column: auto/span 6; } }
 
 .is-open {
   display: block; }
@@ -224,12 +329,120 @@ select[multiple] {
 .is-closed {
   display: none; }
 
-.nav {
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .nav--item {
-    margin-left: 30px; }
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 26px 0; }
+  .header--logo img {
+    height: 39px; }
+  .header--nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .header--nav ul li {
+      margin-left: 50px; }
+  .header--nav a {
+    text-decoration: none;
+    font-weight: 500; }
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 1px #111210;
+  border-radius: 20px;
+  height: 40px;
+  box-shadow: 0px 1px 0px #111210;
+  transition: all 200ms ease-in-out; }
+  .button:hover {
+    cursor: pointer;
+    border: solid 1px #DD452A;
+    box-shadow: 0px 1px 0px #DD452A; }
+  .button:active {
+    box-shadow: none; }
+
+.projects-intro p {
+  background-color: #F5F4EC; }
+
+.project {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  grid-column-gap: 52px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 767px) {
+    .project {
+      display: block; } }
+  .project--illustration {
+    position: relative; }
+    .project--illustration img {
+      width: 100%;
+      z-index: -1;
+      -webkit-transform: scale(0.75, 0.62) translateY(-10px);
+              transform: scale(0.75, 0.62) translateY(-10px); }
+    .project--illustration::after {
+      content: " ";
+      background-image: url("../img/drawn-macbook.png");
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
+  .project--button {
+    margin-top: 52px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+    .project--button a {
+      text-decoration: none; }
+
+.project__even {
+  direction: rtl; }
+
+.hero--text {
+  position: absolute;
+  top: 50%; }
+  .hero--text p {
+    background-color: #F5F4EC;
+    padding: 10px; }
+
+.hero--arrow {
+  position: absolute;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .hero--arrow img {
+    max-height: 117px;
+    background-color: #F5F4EC; }
+
+.contact {
+  text-align: center; }
+  .contact a {
+    font-weight: 500; }
+
+.footer {
+  text-align: center;
+  margin-bottom: 26px; }
 
 /* @import shame */
 /* Should never exist — (file for shameful SASS to be refactored. Check Git Blame to find the person guilty). */

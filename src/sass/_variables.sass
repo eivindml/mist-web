@@ -1,6 +1,29 @@
 /* Colors
-$blackColor: #010101
-$whiteColor: #fefefe
+$darkColor: #111210
+$lightColor: #F5F4EC
+$accentColor: #DD452A
 
 /* Dimensions
-$sectionSpace: 100px
+$baselineHeight: 13px
+$columnWidth: 156px
+
+/* Grid settings
+$gridMaxWidth: 1196px
+$gridGapSize: 52px
+$gridColumns: 6
+
+/* Media queries
+$tablet-width: 768px
+$desktop-width: 1024px
+
+=small
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+=medium
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+=large
+  @media (min-width: #{$desktop-width})
+    @content

@@ -1,13 +1,22 @@
-.l-float-left
-  float: left
-
-.l-float-right
-  float: right
-
-.l-clear
-  clear: both
-
-.l-constrained
-  max-width: 1280px
+.l-wrap
+  width: 100%
+  max-width: $gridMaxWidth
   margin: 0 auto
-  padding: 0 15px
+
+.l-grid
+  display: grid
+  grid-column-gap: $gridGapSize
+  grid-row-gap: $baselineHeight * 21
+  grid-template-columns: repeat($gridColumns, 1fr)
+
+  &__centered
+
+  &--col
+    grid-column: (auto / span) $gridColumns
+
+    @for $i from 1 through $gridColumns
+      &-#{$i}
+        grid-column: (auto / span) $i
+
+        +small
+          grid-column: (auto / span) $gridColumns

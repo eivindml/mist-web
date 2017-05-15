@@ -1,15 +1,17 @@
-# Static Web Template
+# madebymist.com'
 
-Minimalist starting point for web project using pug (formerly Jade), sass (with .sass extension) and watch + browser-sync.
+Repository for madebymist.com website.
 
 ## Prerequisite
 - npm
-- bower `npm install -g bower`
 
-## How to Run
+## How to
 - Clone repo.
 - Delete .git folder.
 - Set paths in `.env` file.
 - `npm install` to install all dependencies.
-- Then `bower install`.
 - `gulp` to compile template files and start `watch` and serve the files.
+
+## License
+
+MIT. 

@@ -1,0 +1,47 @@
+.project
+  text-align: center
+  display: grid
+  grid-column-gap: $gridGapSize
+  grid-template-columns: repeat(2, 1fr)
+  align-items: center
+
+  +small
+    display: block
+
+
+  &--illustration
+    position: relative
+
+    img
+      width: 100%
+      z-index: -1
+      transform: scale(0.75, 0.62) translateY(-10px)
+
+    &::after
+      content: " "
+      background:
+        image: url("../img/drawn-macbook.png")
+        size: 100%
+        position: center center
+        repeat: no-repeat
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+  &--title
+
+  &--description
+
+  &--button
+    margin-top: $baselineHeight * 4
+    width: 50%
+    margin-left: auto
+    margin-right: auto
+
+    a
+      text-decoration: none
+
+.project__even
+  direction: rtl
