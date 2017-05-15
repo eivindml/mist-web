@@ -14,9 +14,12 @@ html(lang="no")
     link(rel='stylesheet', href='fonts/fonts.css')
     link(rel='stylesheet', href='css/main.css')
     //- JS
+    //-script(src="vendor/vendor.js")
     script(src="js/main.js")
+    //-script(src="js/sketch.js")
 
   body
+    #hero-animation
     .l-wrap
 
       .section.section__hero
@@ -41,7 +44,8 @@ html(lang="no")
                 p Hi 👋🏻, my name is Eivind Lindbråten, and I'm a Norwegian freelancer who loves to play around with code and build stuff. Current area of focus are web and iOS projects — but most of all I like to work on fun, creative and weird projects.
 
           .hero--arrow
-            img(src="img/arrow.gif")
+            a(href="#projects")
+              img(src="img/arrow.gif")
 
       .section.section__projects#projects
 
@@ -60,7 +64,7 @@ html(lang="no")
             .project
               .project--col
                 .project--illustration
-                  img(src="img/sample-project.gif")
+                  img(src="img/sample.png")
               .project--col
                 .project--title
                   h1 tenkekassa.no
@@ -77,29 +81,12 @@ html(lang="no")
             .project.project__even
               .project--col
                 .project--illustration
-                  img(src="img/landscape.gif")
+                  img(src="img/sample.png")
               .project--col
                 .project--title
-                  h1 tenkekassa.no
+                  h1 madebymist.com
                 .project--description
-                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
-                .project--button
-                  a(href="#")
-                    .button 
-                      p read more
-
-          .l-grid--col-6
-
-            // Module
-            .project
-              .project--col
-                .project--illustration
-                  img(src="img/sample-project.gif")
-              .project--col
-                .project--title
-                  h1 tenkekassa.no
-                .project--description
-                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
+                  p I wanted to create a website that exists me and that would be fun to build and a place for me to learn.
                 .project--button
                   a(href="#")
                     .button 
@@ -131,7 +118,7 @@ html(lang="no")
           scrollToPosition(rect.top, 300);
         }
 
-        var anchors = document.getElementById("nav").getElementsByTagName("a");
+        var anchors = document.getElementsByTagName("a");
         for (var i = 0; i < anchors.length ; i++) {
           anchors[i].addEventListener("click", scrollToListener);
         }

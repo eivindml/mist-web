@@ -1,13 +1,30 @@
+@keyframes slideIn
+  0%
+    transform: translateY(-30%)
+    opacity: 0
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
 .hero
   &--text
+    opacity: 0
     position: absolute
-    top: 50%
+    top: 67%
+    text-align: center
+    animation: 300ms ease-in-out 2s 1 slideIn
+    animation-fill-mode: forwards
 
     p
-      background-color: $lightColor
+      //background-color: $lightColor
       padding: 10px
+      color: $darkColor
 
   &--arrow
+    opacity: 0
+    animation: 300ms ease-in-out 3s 1 slideIn
+    animation-fill-mode: forwards
     position: absolute
     text-align: center
     margin-left: auto
@@ -18,4 +35,3 @@
 
     img
       max-height: $baselineHeight * 9
-      background-color: $lightColor

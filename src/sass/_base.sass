@@ -1,6 +1,22 @@
 @import base/reset
 @import base/form-reset
 
+#hero-animation
+  position: absolute
+  background-image: url("../img/bg.png")
+  background-size: 140%
+  background-position: center -150px
+  background-repeat: no-repeat
+  width: 100vw
+  height: 100vh
+
+  &::after
+    content: " "
+    position: absolute
+    width: 100vw
+    height: 100vh
+    background: linear-gradient(rgba(0, 0, 0, 0), $lightColor 100%)
+
 body
   background-color: $lightColor
   color: $darkColor
@@ -8,10 +24,6 @@ body
   font-weight: 300
   font-size: 17px
   line-height: 26px
-  background-image: url("../img/bg.png")
-  background-size: 140%
-  background-position: center -150px
-  background-repeat: no-repeat
 
 h1
   font-weight: 500

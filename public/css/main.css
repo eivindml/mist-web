@@ -206,17 +206,28 @@ select[multiple] {
   /* Move the label to the top */
   vertical-align: top; }
 
+#hero-animation {
+  position: absolute;
+  background-image: url("../img/bg.png");
+  background-size: 140%;
+  background-position: center -150px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh; }
+  #hero-animation::after {
+    content: " ";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(transparent, #F5F4EC 100%); }
+
 body {
   background-color: #F5F4EC;
   color: #111210;
   font-family: "Roboto Mono", monospace;
   font-weight: 300;
   font-size: 17px;
-  line-height: 26px;
-  background-image: url("../img/bg.png");
-  background-size: 140%;
-  background-position: center -150px;
-  background-repeat: no-repeat; }
+  line-height: 26px; }
 
 h1 {
   font-weight: 500;
@@ -392,8 +403,8 @@ a {
     .project--illustration img {
       width: 100%;
       z-index: -1;
-      -webkit-transform: scale(0.75, 0.62) translateY(-10px);
-              transform: scale(0.75, 0.62) translateY(-10px); }
+      -webkit-transform: scale(0.76, 0.76) translateY(-5px);
+              transform: scale(0.76, 0.76) translateY(-5px); }
     .project--illustration::after {
       content: " ";
       background-image: url("../img/drawn-macbook.png");
@@ -416,14 +427,45 @@ a {
 .project__even {
   direction: rtl; }
 
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 .hero--text {
+  opacity: 0;
   position: absolute;
-  top: 50%; }
+  top: 67%;
+  text-align: center;
+  -webkit-animation: 300ms ease-in-out 2s 1 slideIn;
+          animation: 300ms ease-in-out 2s 1 slideIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
   .hero--text p {
-    background-color: #F5F4EC;
-    padding: 10px; }
+    padding: 10px;
+    color: #111210; }
 
 .hero--arrow {
+  opacity: 0;
+  -webkit-animation: 300ms ease-in-out 3s 1 slideIn;
+          animation: 300ms ease-in-out 3s 1 slideIn;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   position: absolute;
   text-align: center;
   margin-left: auto;
@@ -432,8 +474,7 @@ a {
   left: 0;
   right: 0; }
   .hero--arrow img {
-    max-height: 117px;
-    background-color: #F5F4EC; }
+    max-height: 117px; }
 
 .contact {
   text-align: center; }

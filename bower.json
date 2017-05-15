@@ -1,0 +1,23 @@
+{
+  "name": "template-static",
+  "description": "Starting point for static web apps.",
+  "main": "app.js",
+  "authors": [
+    "Eivind Mikael Lindbråten <eivind.lindbraaten@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "template"
+  ],
+  "homepage": "https://github.com/madebymist/website",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "p5.js": "p5js#^0.5.9"
+  }
+}
