@@ -221,8 +221,8 @@ select[multiple] {
 #hero-animation {
   position: absolute;
   background-image: url("../img/bg.png");
-  background-size: 140%;
-  background-position: center -150px;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -236,7 +236,7 @@ select[multiple] {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(transparent, #F5F4EC 100%); }
+    background: linear-gradient(rgba(245, 244, 236, 0) 10%, #F5F4EC 100%); }
 
 body {
   background-color: #F5F4EC;
@@ -364,7 +364,7 @@ a {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  padding: 26px 0;
+  padding: 39px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }

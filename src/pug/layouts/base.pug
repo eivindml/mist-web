@@ -50,12 +50,6 @@ html(lang="no")
         .header
           .header--logo
             img(src="img/logo.svg")
-          .header--nav#nav
-            ul
-              li: a(href="#projects") projects
-              li: a(href="#contact") contact
-              li: a(href="/me") /me
-              li: a(href="/now") /now
 
         // Module: Hero
         .hero
@@ -66,53 +60,8 @@ html(lang="no")
                 p Hi 👋🏻, my name is Eivind Lindbråten, and I'm a Norwegian freelancer who loves to play around with code and build stuff. Current area of focus are web and iOS projects — but most of all I like to work on fun, creative and weird projects.
 
           .hero--arrow
-            a(href="#projects")
+            a(href="#contact")
               img(src="img/arrow.gif")
-
-      .section.section__projects#projects
-
-        .l-grid.l-grid__centered
-          .l-grid--col-2
-          .l-grid--col-2
-
-            // Module: Projects Intro
-            .projects-intro
-              p Shown below are some of the projects I have built, either self initated or for clients.👇🏻
-
-        .l-grid
-          .l-grid--col-6
-
-            // Module
-            .project
-              .project--col
-                .project--illustration
-                  img(src="img/sample.png")
-              .project--col
-                .project--title
-                  h1 tenkekassa.no
-                .project--description
-                  p Humanistisk Ungdom created a anti prize called "Tenkekassa", highlighting the importance of critical thinking. They wanted a website where people could vote for their favorite (or least favorite) candidate — and I created this site. It's built on Node.js, uses Google's reCATCHPA to prevent voter fraud, and uses Google Sheets as a backend.
-                .project--button
-                  a(href="#")
-                    .button 
-                      p read more
-
-          .l-grid--col-6
-
-            // Module
-            .project.project__even
-              .project--col
-                .project--illustration
-                  img(src="img/sample.png")
-              .project--col
-                .project--title
-                  h1 madebymist.com
-                .project--description
-                  p I wanted to create a website that exists me and that would be fun to build and a place for me to learn.
-                .project--button
-                  a(href="#")
-                    .button 
-                      p read more
 
       .section.section__contact#contact
 
