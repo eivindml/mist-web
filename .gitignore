@@ -39,3 +39,4 @@ bower_components
 
 # Custom
 .DS_Store/
+public/
