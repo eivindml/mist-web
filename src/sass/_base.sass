@@ -29,11 +29,20 @@
 
 body
   background-color: $lightColor
+
+body, input
   color: $darkColor
   font-family: "Roboto Mono", monospace
   font-weight: 300
   font-size: 17px
   line-height: 26px
+
+input[type="text"]
+  border-bottom: solid 1px $darkColor
+  text-align: center
+
+input[type="text"]:focus
+  border-bottom: solid 1px $accentColor
 
 h1
   font-weight: 500
