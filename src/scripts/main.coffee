@@ -26,3 +26,25 @@ scrollToPosition = (position, scrollDuration) ->
     return
   ), 15)
   return
+
+document.addEventListener("DOMContentLoaded", ->
+  anchors = document.getElementsByTagName("a")
+  for i in [0...anchors.length]
+    href = anchors[i].getAttribute("href")
+    if (href[0] == "#")
+      anchors[i].addEventListener("click", scrollToListener)
+
+  submit = document.getElementById("mail-signup-submit")
+
+  submit.addEventListener("click", (e) ->
+    e.preventDefault()
+    document.getElementById("mail-signup").submit()
+  )
+)
+
+scrollToListener = (event) ->
+  event.preventDefault()
+  attribute = this.getAttribute('href')
+  element = document.getElementById(attribute.substring(1))
+  rect = element.getBoundingClientRect()
+  scrollToPosition(rect.top, 300)

@@ -3,7 +3,7 @@
   "description": "Starting point for static web apps.",
   "main": "app.js",
   "authors": [
-    "Eivind Mikael Lindbråten <eivind.lindbraaten@gmail.com>"
+    "Eivind Mikael Lindbråten <eivind.lindbraten@gmail.com>"
   ],
   "license": "ISC",
   "keywords": [
@@ -18,6 +18,5 @@
     "tests"
   ],
   "dependencies": {
-    "p5.js": "p5js#^0.5.9"
   }
 }

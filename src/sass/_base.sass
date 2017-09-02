@@ -37,11 +37,13 @@ body, input
   font-size: 17px
   line-height: 26px
 
-input[type="text"]
+input[type="text"], input[type="email"]
   border-bottom: solid 1px $darkColor
   text-align: center
+  transition: border 300ms ease-in-out
+  width: 100%
 
-input[type="text"]:focus
+input[type="text"]:focus, input[type="email"]:focus
   border-bottom: solid 1px $accentColor
 
 h1
