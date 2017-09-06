@@ -12,7 +12,6 @@ gulp.task('bower', function() {
 		.pipe(jsFilter)
 		.pipe(concat('vendor.js'))
 		.pipe(gulp.dest("./public/vendor/"))
-	//.pipe(gulp.dest(dist.js))
 	// .pipe(jsFilter.restore())
 	// .pipe(cssFilter)
 	// .pipe(concat('vendor.css'))
