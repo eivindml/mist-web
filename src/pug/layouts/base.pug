@@ -1,92 +1,94 @@
 doctype html
 html(lang="no")
 
-	//- Config Variables
-	- title = "mist"
+  //- Config Variables
+  - title = "mist"
 
-	head
-		title #{title}
+  head
+    title #{title}
 
-		//- Meta
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		//- CSS
-		link(rel='stylesheet', href='fonts/fonts.css')
-		link(rel='stylesheet', href='css/main.css')
-		//- JS
-		script(src="js/main.js", async="")
+    //- Meta
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- CSS
+    link(rel='stylesheet', href='fonts/fonts.css')
+    link(rel='stylesheet', href='css/main.css')
+    //- JS
+    script(src="js/main.js", async="")
 
-		script.
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-104395654-1', 'auto');
-			ga('send', 'pageview');
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-104395654-1', 'auto');
+      ga('send', 'pageview');
 
-		//- Favicon
-		link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
-		link(rel='icon', href='/favicon.ico', type='image/x-icon')
-		link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
-		link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
-		link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
-		link(rel='apple-touch-icon', sizes='76x76', href='/apple-icon-76x76.png')
-		link(rel='apple-touch-icon', sizes='114x114', href='/apple-icon-114x114.png')
-		link(rel='apple-touch-icon', sizes='120x120', href='/apple-icon-120x120.png')
-		link(rel='apple-touch-icon', sizes='144x144', href='/apple-icon-144x144.png')
-		link(rel='apple-touch-icon', sizes='152x152', href='/apple-icon-152x152.png')
-		link(rel='apple-touch-icon', sizes='180x180', href='/apple-icon-180x180.png')
-		link(rel='icon', type='image/png', sizes='192x192', href='/android-icon-192x192.png')
-		link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
-		link(rel='icon', type='image/png', sizes='96x96', href='/favicon-96x96.png')
-		link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
-		link(rel='manifest', href='/manifest.json')
-		meta(name='msapplication-TileColor', content='#F5F4EC')
-		meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
-		meta(name='theme-color', content='#F5F4EC')
+    //- Favicon
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#F5F4EC')
+    meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+    meta(name='theme-color', content='#F5F4EC')
 
 
-	body
-		#hero-animation
-		.l-wrap
+  body
+    #hero-animation
+    .l-wrap
+      .section.section__hero
 
-			.section.section__hero
+        // Module: Header
+        .header
+          .header--logo
+            img(src="img/logo.svg")
+          .header--nav
+            ul
+              li: a(href="") projects
+              li: a(href="") contact
+              li: a(href="") self
 
-				// Module: Header
-				.header
-					.header--logo
-						img(src="img/logo.svg")
+        // Module: Hero
+        .hero
+          .hero--text
+            .l-grid
+              .l-grid--col-6
+                p Hi 👋🏻, my name is Eivind Lindbråten, and I'm an independent maker of macOS and iOS apps. I also do freelance projects related to; macOS, iOS, web or visual creative coding, so do say 'hello'.
 
-				// Module: Hero
-				.hero
-					.hero--text
-						.l-grid
-							.l-grid--col-1
-							.l-grid--col-4
-								p Hi 👋🏻, my name is Eivind Lindbråten, and I'm an independent maker of macOS and iOS apps. I also do freelance projects related to; macOS, iOS, web or visual creative coding, so do say 'hello'.
+          .hero--arrow
+            a(href="#contact")
+              img(src="img/arrow.gif")
 
-					.hero--arrow
-						a(href="#contact")
-							img(src="img/arrow.gif")
+      .section.section__contact#contact
 
-			.section.section__contact#contact
+        .l-grid
+          .l-grid--col-6
+            // Module: Contact
+            .contact
+              p If you think we should work together, please contact me.
+              a(href="mailto:eivind@madebymist.com") eivind@madebymist.com
 
-				.l-grid
-					.l-grid--col-1
-					.l-grid--col-4
-						// Module: Contact
-						.contact
-							p If you think we should work together, please contact me.
-							a(href="mailto:eivind@madebymist.com") eivind@madebymist.com
+            // Module: Email Sign Up
+            .form-sign-up
+              p For very infrequent updates about new and upcomming Mist app releases, enter your email below.
+              include ../helpers/form-sign-up.pug
 
-						// Module: Email Sign Up
-						.form-sign-up
-							p For very infrequent updates about new and upcomming Mist app releases, enter your email below.
-							include ../helpers/form-sign-up.pug
-
-			// Module: Footer
-			.footer
-				ul
-					li: a(href="https://github.com/eivindml") github.com/eivindml
-					li: a(href="https://twitter.com/eivindml") twitter.com/eivindml
-					li: a(href="mailto:eivind@madebymist.com") eivind@madebymist.com
+      // Module: Footer
+      .footer
+        ul
+          li: a(href="https://github.com/eivindml") github.com/eivindml
+          li: a(href="https://twitter.com/eivindml") twitter.com/eivindml
+          li: a(href="mailto:eivind@madebymist.com") eivind@madebymist.com
