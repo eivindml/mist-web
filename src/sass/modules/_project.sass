@@ -1,47 +1,34 @@
-.project
-  text-align: center
-  display: grid
-  grid-column-gap: $gridGapSize
-  grid-template-columns: repeat(2, 1fr)
-  align-items: center
+.c-project
+  @extend .l-grid
 
-  +small
-    display: block
+  margin-bottom: $baselineHeight * 11
 
+  &__image
+    @extend .l-grid--col-3
 
-  &--illustration
-    position: relative
+    width: 100%
+    border-radius: $baselineHeight
 
-    img
-      width: 100%
-      z-index: -1
-      transform: scale(0.71, 0.73) translateY(-5px) translateX(-4px)
+  &__description
+    @extend .l-grid--col-3
 
-    &::after
-      content: " "
-      background:
-        image: url("../img/frame-macbook.png")
-        size: 100%
-        position: center center
-        repeat: no-repeat
-      position: absolute
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
 
-  &--title
+  &__title
+    @extend .t-large-title
 
-  &--description
+  &__body
+    margin-top: $baselineHeight
+    margin-bottom: $baselineHeight
 
-  &--button
-    margin-top: $baselineHeight * 4
-    width: 50%
-    margin-left: auto
-    margin-right: auto
+  &__link
 
-    a
-      text-decoration: none
+  &--alternate
+    .c-project__image
+      +medium-to-large
+        order: 2
 
-.project__even
-  direction: rtl
+  &--last
+    margin-bottom: 0
