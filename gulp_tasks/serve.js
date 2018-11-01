@@ -5,6 +5,15 @@ var dotenv = require('dotenv').config({
 });
 var dotenvExpand = require('dotenv-expand')(dotenv);
 
+var pug = require('gulp-pug');
+
+gulp.task('pug', function buildHTML () {
+  return gulp.src('src/pug/index.pug')
+  .pipe(pug({
+    // Your options in here.
+  }))
+});
+
 gulp.task('serve', function() {
     browserSync.init({
         server: process.env.PATH_DIST,
