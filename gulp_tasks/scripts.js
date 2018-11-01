@@ -1,14 +1,12 @@
 var gulp = require('gulp');
-var coffee = require('gulp-coffee');
+var concat = require('gulp-concat');
 var dotenv = require('dotenv').config({
-  'path': '../'
+    'path': '../'
 });
 var dotenvExpand = require('dotenv-expand')(dotenv);
 
 gulp.task('scripts', function() {
-  gulp.src(process.env.PATH_JS_SRC)
-    .pipe(coffee({
-      bare: true
-    }))
-    .pipe(gulp.dest(process.env.PATH_JS_DIST));
+    gulp.src(process.env.PATH_JS_SRC)
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest(process.env.PATH_JS_DIST));
 });

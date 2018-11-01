@@ -1,14 +1,8 @@
-.l-wrap
-  max-width: $gridMaxWidth
-  margin: 0 auto
-
 .l-grid
   display: grid
+  grid-row-gap: $baselineHeight
   grid-column-gap: $gridGapSize
-  grid-row-gap: $baselineHeight * 21
   grid-template-columns: repeat($gridColumns, 1fr)
-
-  &__centered
 
   &--col
     grid-column: (auto / span) $gridColumns

@@ -1,0 +1,6 @@
+.main
+  // Subtract the height of the menu from the
+  // total window height. Logo and icons are 2xbaselineHeight,
+  // and padding is 1 x baselineHeight, which gives 5.The extra
+  // -1 is for the bottom border.
+  min-height: calc((100vh - ((#{$baselineHeight} * 4))) - 1px)

@@ -1,13 +1,13 @@
 {
-  "name": "template-static",
-  "description": "Starting point for static web apps.",
+  "name": "mist-website",
+  "description": "Website for http://madebymist.com",
   "main": "app.js",
   "authors": [
     "Eivind Mikael Lindbråten <eivind.lindbraten@gmail.com>"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
-    "template"
+    "mist, website"
   ],
   "homepage": "https://github.com/madebymist/website",
   "ignore": [
@@ -18,5 +18,7 @@
     "tests"
   ],
   "dependencies": {
+    "p5.js": "p5js#^0.5.13",
+    "smoothscroll": "^0.4.0"
   }
 }

@@ -7,6 +7,8 @@ $accentColor: #DD452A
 $baselineHeight: 13px
 $columnWidth: 156px
 
+$baseFontSize: 17px
+
 /* Grid settings
 $gridMaxWidth: 1196px
 $gridGapSize: 52px
@@ -22,6 +24,10 @@ $desktop-width: 1024px
 
 =medium
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+=medium-to-large
+  @media (min-width: #{$tablet-width})
     @content
 
 =large
