@@ -1,33 +1,28 @@
 {
-  "name": "mist-website",
-  "version": "1.1.2",
-  "description": "Website for http://madebymist.com.",
-  "main": "app.js",
+  "name": "next-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "keywords": [
-    "mist, website"
-  ],
-  "author": "Eivind Lindbråten",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mdx-js/loader": "^1.4.0",
+    "@next/mdx": "^9.0.5",
+    "@zeit/next-mdx": "^1.2.0",
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
   "devDependencies": {
-    "browser-sync": "^2.16.0",
-    "del": "^3.0.0",
-    "dotenv": "^6.1.0",
-    "dotenv-expand": "^4.0.1",
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-coffee": "^3.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-filter": "^5.0.0",
-    "gulp-google-webfonts": "2.0.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-shell": "^0.6.3",
-    "gulp-watch": "^5.0.1",
-    "main-bower-files": "^2.13.1",
-    "require-dir": "^1.1.0"
+    "@types/node": "^12.7.3",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "typescript": "^3.6.2"
   }
 }
