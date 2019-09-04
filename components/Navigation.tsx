@@ -1,15 +1,13 @@
 // TODO: Add scroll to show/hide border bottom of navigation
 import Link from 'next/link'
+import Logo from './Logo'
 
 const Index = () => (
   <div className='navigation'>
     <nav className='navigation__container'>
       <Link href='/'>
-        <a>
-          <img
-            className='navigation__logo'
-            src='static/logo.svg'
-          />
+        <a className='navigation__logo'>
+          <Logo />
         </a>
       </Link>
 

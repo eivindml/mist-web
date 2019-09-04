@@ -1,13 +1,14 @@
+import Image from './Image'
+
 const Index = () => (
   <div className='project'>
-    <img src='static/Artboard.png' />
+    <Image />
     <div className='project__text-box'>
       <p>Tidtager for iOS og macOS</p>
       <h3>Minutes</h3>
     </div>
     <style jsx>{`
       .project {
-        background-color: pink;
         width: 100%;
         height: 100%;
         position: relative;
