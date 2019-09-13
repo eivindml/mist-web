@@ -1,15 +1,25 @@
 const Index = () => (
   <div className='hero'>
     <p className='hero__tagline'>
-    Hello 👋🏻. I'm an Apple ecosystem developer from Norway.
+    <span>Hello.</span>I'm an Apple ecosystem developer from Oslo in Norway.
     </p>
 
     <style jsx global>{`
       .hero__tagline {
         text-align: center;
-        font-size: 2.4em;
+        font-size: 48px;
         line-height: 1.4em;
         font-weight: 700;
+      }
+
+      span {
+        font-size: 144px;
+        display: block;
+        line-height: 1em;
+      }
+      span:after {
+        position: absolute;
+        content: '👋🏻';
       }
     `}</style>
   </div>

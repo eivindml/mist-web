@@ -10,11 +10,11 @@ const Home = () => (
       <Hero />
     </section>
     <section className='pull'>
-      <h2>Apps</h2>
+      <h2 id="apps">Apps</h2>
       <Projects />
     </section>
     <section className='pull'>
-      <h2>Client projects</h2>
+      <h2 id="work">Client work</h2>
       <Projects />
     </section>
     <style jsx>{`
@@ -26,7 +26,7 @@ const Home = () => (
       }
 
       section {
-        margin-top: 200px;
+        margin-top: 160px;
       }
 
       section.pull {

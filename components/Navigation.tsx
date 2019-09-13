@@ -11,6 +11,14 @@ const Index = () => (
         </a>
       </Link>
 
+      <Link href='/#apps'>
+        <a className='navigation__item'>Apps</a>
+      </Link>
+
+      <Link href='/#work'>
+        <a className='navigation__item'>Work</a>
+      </Link>
+
       <Link href='/blog'>
         <a className='navigation__item'>Blog</a>
       </Link>
@@ -22,7 +30,7 @@ const Index = () => (
         position: sticky;
         top: 0;
         background-color: rgba(255, 255, 255, 0.75);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         z-index: 1;
       }
 
@@ -43,15 +51,16 @@ const Index = () => (
       .navigation__item {
         color: black;
         text-decoration: none;
-        font-size: 17px;
-        font-weight: 700;
-        border-bottom: solid 5px rgba(0, 0, 0, 0);
-        transition: border-color 350ms ease-in-out;
-        height: calc(1em - 2px);
+        font-size: 15px;
+        font-weight: 600;
+        //border-bottom: solid 5px rgba(0, 0, 0, 0);
+        transition: color 350ms ease-in-out;
+        //height: calc(1em - 2px);
         padding: 0 0 0 5px;
       }
       .navigation__item:hover {
-        border-bottom: solid 5px #FFDB4C;
+        //border-bottom: solid 5px #FFDB4C;
+        color: #999;
       }
     `}</style>
   </div>
