@@ -12,13 +12,19 @@ const Index = ({ children }) => (
       />
     </Head>
 
-    <Navigation />
+    <div className='wrap'>
 
-    <main>
-      { children }
-    </main>
+      <Navigation />
 
-    <Footer />
+      <main>
+        { children }
+      </main>
+
+    </div>
+
+    <div className='wrap__bottom'>
+      <Footer />
+    </div>
 
     <style jsx global>{`
       body, html, ul, p, li, img, a {
@@ -39,6 +45,20 @@ const Index = ({ children }) => (
         margin: 0 auto;
         max-width: 900px;
         box-sizing: border-box;
+      }
+
+      .wrap {
+        background-color: white;
+        margin-bottom: 200px;
+        padding-bottom: 100px;
+      }
+
+      .wrap__bottom {
+        height: 200px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
       }
     `}</style>
   </div>

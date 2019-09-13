@@ -5,7 +5,6 @@ import Content from '../components/Content'
 // TODO: Read metadata from file
 // https://dev.to/ankursheel/automating-the-creation-of-a-new-blog-post-3pba
 // TODO: Add steps for static exporting blog posts to html: https://alehatsman.com/post/static_blog_generator_using_nextjs_styledcomponents_mdx.html
-
 // TODO: How is this cached? Research how we can heavily cache this site,
 // both in browser, and using zeit/cachefly/etc.
 
@@ -20,7 +19,6 @@ function parsePosts (posts) {
   return posts
     .map(p => ({
       ...p.meta,
-    //   ...p.meta,
       // createdAt: moment(p.meta.createdAt),
       Doc: p.default
     }))
@@ -37,11 +35,8 @@ function sortPosts (posts) {
 }
 
 function requirePosts () {
-  function requireAll (r) {
-    return r.keys().map(r)
-  }
+  function requireAll (r) { return r.keys().map(r) }
   return requireAll(require.context('../posts', true, /\.mdx$/))
-  // return require.context('../posts', true, /\.mdx$/).keys()
 }
 
 const posts = parsePosts(requirePosts())
@@ -61,16 +56,13 @@ const Test = ({ children }) => (
   </div>
 )
 
-
 // TODO: Skrive veldig kort blogpost om hvordan man kan sette opp blogg med
 
 const Index = () => (
   <Layout>
     {posts.map(post =>
       <Content Doc={post.Doc} />
-    )
-
-    }
+    )}
 
     <style jsx global>{`
       // TODO: Add blogpost styling
