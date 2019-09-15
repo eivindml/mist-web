@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
+// TODO: Kan legge til en gøy overscroll på top. Noe som skjuler seg under.
+
 const Index = ({ children }) => (
   <div>
     <Head>
