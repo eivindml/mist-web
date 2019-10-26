@@ -1,7 +1,7 @@
 const Index = () => (
   <div className='hero'>
     <p className='hero__tagline'>
-    <span>Hello.</span>I'm an Apple ecosystem developer from Oslo in Norway.
+    <span>Hello.</span>I'm an Apple ecosystem developer from Norway, and this is my one-man studio.
     </p>
 
     <style jsx global>{`
