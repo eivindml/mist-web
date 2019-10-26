@@ -12,14 +12,13 @@ const Index = () => {
   var ref = createRef<HTMLImageElement>()
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(document.documentElement.scrollTop > 250)
+    }
     setIsScrolled(document.documentElement.scrollTop > 250)
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleScroll = () => {
-    setIsScrolled(document.documentElement.scrollTop > 250)
-  }
 
 return (
   <div className='navigation'>
