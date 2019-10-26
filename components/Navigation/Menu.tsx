@@ -24,7 +24,13 @@ export default () => {
     <nav className='menu'>
 
       <div className={`menu__items ${ isScrolled ? "scr" : "nscr"}`}>
-        <Link href='/#apps'>
+        <Link href='https://github.com/eivindml'>
+          <a className='menu__item'>Github</a>
+        </Link>
+        <Link href='https://twitter.com/eivindml'>
+          <a className='menu__item'>Twitter</a>
+        </Link>
+        {/* <Link href='/#apps'>
           <a className='menu__item'>Apps</a>
         </Link>
 
@@ -34,7 +40,7 @@ export default () => {
 
         <Link href='/blog'>
           <a className='menu__item'>Blog</a>
-        </Link>
+        </Link> */}
        </div>
 
       <div
