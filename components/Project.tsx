@@ -7,6 +7,7 @@ const Index = () => (
       <p>Tidtager for iOS og macOS</p>
       <h3>Minutes</h3>
     </div>
+    
     <style jsx>{`
       .project {
         width: 100%;

@@ -1,6 +1,7 @@
 const Index = () => (
   <div className='hero'>
     <p className='hero__tagline'>
+      {/* I create apps */}
     <span>Hello.</span>I'm an Apple ecosystem developer from Norway, and this is my one-man studio.
     </p>
 
