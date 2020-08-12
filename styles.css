@@ -16,3 +16,7 @@ html {
   line-height: 26px;
   font-weight: 300;
 }
+
+:root {
+  --line-height: 26px;
+}
