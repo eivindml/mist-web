@@ -20,3 +20,8 @@ html {
 :root {
   --line-height: 26px;
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
