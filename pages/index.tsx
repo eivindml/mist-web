@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
+import Sections from "../components/Sections";
 import Values from "../components/Values";
 // import Mist from "@eivindml/mist-animation";
 
@@ -10,6 +11,9 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
     <div className="home__main">
       <Layout>
         <Hero />
+        <div className="home__section">
+          <Sections />
+        </div>
         <Values />
       </Layout>
     </div>
@@ -24,7 +28,13 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
         box-shadow: 0px 10px 75px black;
         z-index: 2;
         position: relative;
+        padding-bottom: calc(var(--line-height) * 10);
       }
+
+      .home__section {
+        margin-bottom: calc(var(--line-height) * 8);
+      }
+
       .home__footer {
         position: sticky;
         bottom: 0;

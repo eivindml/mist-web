@@ -9,10 +9,10 @@ const Layout: NextPage<LayoutProps> = (props) => (
     {props.children}
     <style jsx>{`
       .layout {
-        max-width: 1208px;
+        max-width: 1108px;
         margin: 0 var(--line-height);
       }
-      @media (min-width: 1248px) {
+      @media (min-width: 1148px) {
         .layout {
           margin: 0 auto;
         }
