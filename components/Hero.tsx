@@ -1,8 +1,10 @@
 import { NextPage } from "next";
+import Mist from "@eivindml/mist-animation";
 
 const Hero: NextPage = () => (
   <div className="hero">
     <img src="/logo.png" className="hero__logo" />
+    <div className="hero__animation">{/* <Mist /> */}</div>
     <div className="hero__container">
       <h1 className="hero__title">
         <span>Mist is a one-man studio</span>
@@ -30,6 +32,17 @@ const Hero: NextPage = () => (
       .hero__container {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+      }
+
+      .hero__animation {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
       }
 
       .hero__title {

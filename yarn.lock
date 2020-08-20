@@ -1187,10 +1187,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@eivindml/mist-animation@^1.0.14":
-  version "1.0.14"
-  resolved "https://npm.pkg.github.com/download/@eivindml/mist-animation/1.0.14/9ce06d5f7222d1aa08c7cfc18c9bd0a60742933091bb0a41236ac3394a20f301#f38da96e320ef52f94ed0130a5aac07334f2fd26"
-  integrity sha512-rIcl6H9xAUvGHswe5bRs+XhF9Km2PaQMYTTtfSnf72KV7LhzHX9JFqYxM/jS9ZcBBQ9SvGj2MFUBC+sBC+PhTw==
+"@eivindml/mist-animation@^1.0.18":
+  version "1.0.18"
+  resolved "https://npm.pkg.github.com/download/@eivindml/mist-animation/1.0.18/2d5c7d754c04e79c6c55ded07178a1b2b884f0e83abf6aa301ba4bb5ee554277#fd374644cbb4454e1acb44e1cf69039ec3a0f78f"
+  integrity sha512-apROI03CfvYEQ/gGjaXnZUqGYdc2I85/uzughJkAFxamQOFipPj39JnTAwJCdC/wOX3IHpNUbmHu+A/juCqb9w==
   dependencies:
     noisejs "^2.1.0"
     react "^16.13.1"

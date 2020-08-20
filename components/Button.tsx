@@ -1,11 +1,21 @@
 import { NextPage } from "next";
+import cs from "classnames";
 
 interface ButtonProps {
   title: string;
+  onClick(): void;
+  dismiss?: boolean;
+  small?: boolean;
 }
 
 const Button: NextPage<ButtonProps> = (props) => (
-  <div className="button">
+  <div
+    className={cs("button", {
+      "button--dismiss": props.dismiss,
+      "button--small": props.small,
+    })}
+    onClick={props.onClick}
+  >
     {props.title}
     <style jsx>{`
       .button {
@@ -28,6 +38,21 @@ const Button: NextPage<ButtonProps> = (props) => (
         box-shadow: 0px 2px 70px rgba(2, 122, 255, 0.3),
           0px 0px 15px rgba(2, 122, 255, 0.3);
         transform: scale(1.04);
+      }
+      .button--dismiss {
+        background-color: #777;
+        box-shadow: 0 2px 13px rgba(122, 122, 122, 0.3);
+      }
+      .button--dismiss:hover {
+        box-shadow: 0px 2px 70px rgba(122, 122, 122, 0.3),
+          0px 0px 15px rgba(122, 122, 122, 0.3);
+      }
+      .button--small {
+        padding: 14px 32px;
+        box-shadow: none;
+      }
+      .button--small:hover {
+        box-shadow: none;
       }
     `}</style>
   </div>

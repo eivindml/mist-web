@@ -46,6 +46,7 @@ const Footer: NextPage = () => (
         </div>
       </div>
     </Layout>
+    <div className="footer__overscroll"></div>
     <style jsx>{`
       .footer {
         background-color: #151714;
@@ -77,6 +78,16 @@ const Footer: NextPage = () => (
         .footer__cell {
           grid-column: span 4;
         }
+      }
+
+      .footer__overscroll {
+        background-color: #151714;
+        height: 600px;
+        position: fixed;
+        bottom: -300px;
+        left: 0;
+        right: 0;
+        z-index: -1;
       }
     `}</style>
   </div>

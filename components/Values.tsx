@@ -38,7 +38,7 @@ const Values: NextPage = () => (
       </div>
 
       <div className="values__action">
-        <Button title="Get in touch" />
+        <Button title="Get in touch" onClick={() => {}} />
       </div>
     </div>
 

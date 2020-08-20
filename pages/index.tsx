@@ -4,7 +4,6 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Sections from "../components/Sections";
 import Values from "../components/Values";
-// import Mist from "@eivindml/mist-animation";
 
 const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
   <div>
