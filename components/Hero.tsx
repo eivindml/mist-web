@@ -4,7 +4,9 @@ import Mist from "@eivindml/mist-animation";
 const Hero: NextPage = () => (
   <div className="hero">
     <img src="/logo.png" className="hero__logo" />
-    <div className="hero__animation">{/* <Mist /> */}</div>
+    <div className="hero__animation">
+      <Mist />
+    </div>
     <div className="hero__container">
       <h1 className="hero__title">
         <span>Mist is a one-man studio</span>
@@ -40,9 +42,11 @@ const Hero: NextPage = () => (
         right: 0;
         top: 0;
         bottom: 0;
-        width: 100%;
+        width: 100vw;
         height: 100%;
-        z-index: 3;
+        margin-left: -50vw;
+        left: 50%;
+        z-index: 1;
       }
 
       .hero__title {

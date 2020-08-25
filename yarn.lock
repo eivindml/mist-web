@@ -1187,10 +1187,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@eivindml/mist-animation@^1.0.18":
-  version "1.0.18"
-  resolved "https://npm.pkg.github.com/download/@eivindml/mist-animation/1.0.18/2d5c7d754c04e79c6c55ded07178a1b2b884f0e83abf6aa301ba4bb5ee554277#fd374644cbb4454e1acb44e1cf69039ec3a0f78f"
-  integrity sha512-apROI03CfvYEQ/gGjaXnZUqGYdc2I85/uzughJkAFxamQOFipPj39JnTAwJCdC/wOX3IHpNUbmHu+A/juCqb9w==
+"@eivindml/mist-animation@^1.0.20":
+  version "1.0.20"
+  resolved "https://npm.pkg.github.com/download/@eivindml/mist-animation/1.0.20/0738ff002c7b88a72110984bf47476171613b38f4afe40d90cc6b5a7246d1faf#80f7fb3f9bd2a1b981e5e13474541068339d9cda"
+  integrity sha512-1yeHx/SMJzFJAGMqZ4rE5K5eEmZsctNFY6JjDP1jFOJph/3+de1Okyu+zw/HhgckrXOkf3rgvZYtT4bCtYmsGQ==
   dependencies:
     noisejs "^2.1.0"
     react "^16.13.1"
@@ -1218,6 +1218,11 @@
   version "9.5.1"
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.5.1.tgz#fe257fafe1a7f1c0c6e818017fa65b5ee45c5eca"
   integrity sha512-A19z/E6f08RXfBRc2STQ+5qo7iSPif7mNcww9dZAVli3Idu4umGP5dbpL71Hz1vyRs1eMUEylXTpXsY2WzY07g==
+
+"@types/classnames@^2.2.10":
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/@types/classnames/-/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
+  integrity sha512-1UzDldn9GfYYEsWWnn/P4wkTlkZDH7lDb0wBMGbtIQc9zXEQq7FlKBdZUn6OBqD8sKZZ2RQO2mAjGpXiDGoRmQ==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"

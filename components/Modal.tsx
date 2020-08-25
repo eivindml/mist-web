@@ -2,18 +2,19 @@ import { NextPage } from "next";
 import cs from "classnames";
 import Button from "./Button";
 
+interface Action {
+  title: string;
+  url?: string;
+  onClick?(): void;
+}
+
 interface ModalProps {
   show: boolean;
   handleClose(): void;
   children: any;
-  action?: {
-    title: string;
-    url?: string;
-    onClick?(): void;
-  };
+  actions?: Array<Action>;
   dismiss?: {
     title: string;
-    url?: string;
     onClick?(): void;
   };
 }
@@ -36,13 +37,16 @@ const Modal: NextPage<ModalProps> = (props) => {
               small
             />
           )}
-          {props.action && (
-            <Button
-              title={props.action.title}
-              onClick={props.action.onClick}
-              small
-            />
-          )}
+          {props.actions &&
+            props.actions.map((action: Action) => (
+              <Button
+                title={action.title}
+                onClick={action.onClick}
+                url={action.url}
+                small
+                key={action.title}
+              />
+            ))}
         </div>
       </div>
       <style jsx>{`
@@ -77,11 +81,11 @@ const Modal: NextPage<ModalProps> = (props) => {
 
         .modal__main {
           background-color: white;
-          width: calc(100vw - (var(--line-height) * 2));
+          width: calc(100vw - (var(--line-height) * 1));
           max-width: 860px;
           border-radius: 30px;
           box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.3);
-          padding: calc(var(--line-height) * 2);
+          padding: calc(var(--line-height) * 1);
           box-sizing: border-box;
           animation-name: moveUp;
           animation-duration: 550ms;
@@ -92,6 +96,12 @@ const Modal: NextPage<ModalProps> = (props) => {
           justify-content: space-between;
           animation-delay: 150ms;
           opacity: 0;
+        }
+        @media (min-width: 600px) {
+          .modal__main {
+            width: calc(100vw - (var(--line-height) * 2));
+            padding: calc(var(--line-height) * 2);
+          }
         }
 
         @keyframes moveUp {
@@ -111,7 +121,18 @@ const Modal: NextPage<ModalProps> = (props) => {
         .modal__buttons {
           display: flex;
           justify-content: space-between;
-          margin-top: calc(var(--line-height) * 3);
+          margin-top: calc(var(--line-height) * 2);
+          flex-wrap: wrap;
+          margin-bottom: -calc(var(--line-height) * 0.5);
+        }
+        @media (min-width: 600px) {
+          .modal__buttons {
+            margin-top: calc(var(--line-height) * 3);
+          }
+        }
+
+        .modal__buttons > :global(*) {
+          margin-bottom: calc(var(--line-height) * 0.5);
         }
 
         :global(body) {

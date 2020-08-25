@@ -4,32 +4,56 @@ import Modal from "../Modal";
 import Section from "./Section";
 import ModalContent from "../ModalContent";
 
+enum State {
+  Hidden,
+  ShowServices,
+  ShowApps,
+}
+
 const Sections: NextPage = () => {
-  const [show, setShow] = useState(false);
-  const handleOpen = () => setShow(true);
-  const handleClose = () => {
-    console.log("here");
-    setShow(false);
-  };
+  const [state, setState] = useState(State.Hidden);
+  const handleOpen = (state: State) => () => setState(state);
+  const handleClose = () => setState(State.Hidden);
+
   return (
     <>
-      <Modal
-        show={show}
-        handleClose={handleClose}
-        action={{
-          title: "Send me an e-mail",
-          url: "mailto:eivindml@icloud.com",
-        }}
-        dismiss={{
-          title: "Dismiss",
-          onClick: handleClose,
-        }}
-      >
-        <ModalContent
-          title="What I can offer."
-          body="Hello world. This is my text."
-        />
-      </Modal>
+      {state === State.ShowServices && (
+        <Modal
+          show={true}
+          handleClose={handleClose}
+          actions={[
+            {
+              title: "Send me an e-mail",
+              url: "mailto:eivindml@icloud.com",
+            },
+          ]}
+          dismiss={{
+            title: "Dismiss",
+            onClick: handleClose,
+          }}
+        >
+          <ModalContent
+            title="My services."
+            body="I build native apps and custom website. The apps are created using native Swift, and can be target for any of the Apple platforms: iOS, macOS, watchOS or tvOS, using the latest Apple technologies. I have experience with many of their frameworks, including ARKit (Augmented Reality) and SceneKit (3D). I really enjoy creating apps that fully integrate into and respect the Apple ecosystem. When I build websites, I'm currently using a tech stack consisting of Sanity for the backend CMS, and Next.js/React for the frontend. I usually write all custom CSS and animations, and can also create three dimensional interactive elements using Three.js."
+          />
+        </Modal>
+      )}
+      {state === State.ShowApps && (
+        <Modal
+          show={true}
+          handleClose={handleClose}
+          dismiss={{
+            title: "Dismiss",
+            onClick: handleClose,
+          }}
+        >
+          <ModalContent
+            title="My apps."
+            body="I'm currently working on an interesting self-funded app project that will be released natively for both iOS and macOS. Check back soon (hopefully sometimes in September) for a new app landing page, where you can register your interest in the project, and sign up for beta testing. The app will be in a crowded category space, but will solve the problem in some new and fun ways."
+          />
+        </Modal>
+      )}
+
       <div className="sections">
         <Section
           alternate={false}
@@ -40,7 +64,7 @@ const Sections: NextPage = () => {
             title: "View my services",
             url: "/",
           }}
-          handleOpen={handleOpen}
+          handleOpen={handleOpen(State.ShowServices)}
         />
         <Section
           alternate={true}
@@ -51,7 +75,7 @@ const Sections: NextPage = () => {
             title: "Play with my apps",
             url: "/",
           }}
-          handleOpen={handleOpen}
+          handleOpen={handleOpen(State.ShowApps)}
         />
         <style jsx>{`
           .sections {
