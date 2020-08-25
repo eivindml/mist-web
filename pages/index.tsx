@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Sections from "../components/Sections";
 import Values from "../components/Values";
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
+const Home: NextPage = () => (
   <div>
     <div className="home__main">
       <Layout>
@@ -43,10 +43,5 @@ const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
     `}</style>
   </div>
 );
-
-Home.getInitialProps = async ({ req }) => {
-  const userAgent = req ? req.headers["user-agent"] || "" : navigator.userAgent;
-  return { userAgent };
-};
 
 export default Home;

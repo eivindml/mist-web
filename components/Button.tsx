@@ -38,7 +38,12 @@ const Button: NextPage<ButtonProps> = (props) => (
         display: inline-block;
         color: white;
         font-weight: 700;
-
+        -webkit-tap-highlight-color: rgba(
+          0,
+          0,
+          0,
+          0
+        ); // Disable tap highlight square
         border-radius: 36px;
         cursor: pointer;
         box-shadow: 0 2px 13px rgba(2, 122, 255, 0.3);
