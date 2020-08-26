@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { NextPage } from "next";
 import Button from "../Button";
 import cs from "classnames";
@@ -8,6 +7,7 @@ interface SectionProps {
   title: string;
   body: string;
   illustration: string;
+  alt: string;
   link: {
     url: string;
     title: string;
@@ -27,7 +27,22 @@ const Section: NextPage<SectionProps> = (props) => {
           </div>
         </div>
         <div className="section__illustration">
-          <img src={props.illustration} />
+          <picture>
+            <source
+              srcSet={`/${props.illustration}.webp 1x, /${props.illustration}-2x.webp 2x`}
+              type="image/webp"
+            />
+            <source
+              srcSet={`/${props.illustration}.png 1x, /${props.illustration}-2x.png 2x`}
+              type="image/png"
+            />
+            <img
+              src={`/${props.illustration}-2x.png`}
+              alt={props.alt}
+              width="470"
+              height="628"
+            />
+          </picture>
         </div>
         <style jsx>{`
           .section {
@@ -87,8 +102,9 @@ const Section: NextPage<SectionProps> = (props) => {
               grid-column: 2 / span 4;
             }
           }
-          .section__illustration > :global(img) {
+          .section__illustration > :global(* > *) {
             width: 100%;
+            height: auto;
           }
 
           .section__title {

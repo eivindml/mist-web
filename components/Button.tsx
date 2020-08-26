@@ -27,6 +27,7 @@ const Button: NextPage<ButtonProps> = (props) => (
         className="button__url button__wrapper"
         href={props.url}
         target="_blank"
+        rel="noopener"
       >
         {props.title}
       </a>

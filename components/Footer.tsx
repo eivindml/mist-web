@@ -11,6 +11,7 @@ const Footer: NextPage = () => (
             title="Contact"
             body="Get in touch with me through email ${email}."
             icon="/contact.png"
+            alt="Icon of an envelope."
             link={{
               title: "eivindml@icloud.com",
               url: "mailto:eivindml@icloud.com",
@@ -24,6 +25,7 @@ const Footer: NextPage = () => (
             title="Follow"
             body="Join me on Instagram to follow the work I do ${instagram}."
             icon="/follow.png"
+            alt="Icon for Instagram."
             link={{
               title: "@eivindml",
               url: "https://instagram.com/eivindml",
@@ -37,6 +39,7 @@ const Footer: NextPage = () => (
             title="Visit"
             body="Visit me at my desk at the co-work space ${greenhouse}."
             icon="/visit.png"
+            alt="Icon showing a location pin."
             link={{
               title: "@greenhouse",
               url: "https://www.greenhouseoslo.no",

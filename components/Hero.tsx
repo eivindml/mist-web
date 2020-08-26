@@ -3,7 +3,11 @@ import Mist from "@eivindml/mist-animation";
 
 const Hero: NextPage = () => (
   <div className="hero">
-    <img src="/logo.png" className="hero__logo" />
+    <img
+      src="/logo.png"
+      className="hero__logo"
+      alt="Logo for Mist, consisting of a mountain and some mist flowing by."
+    />
     <div className="hero__animation">
       <Mist />
     </div>

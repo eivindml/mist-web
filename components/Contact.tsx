@@ -4,6 +4,7 @@ interface ContactProps {
   title: string;
   body: string;
   icon: string;
+  alt: string;
   link: {
     title: string;
     url: string;
@@ -13,13 +14,18 @@ interface ContactProps {
 
 const Contact: NextPage<ContactProps> = (props) => (
   <div className="contact">
-    <img className="contact__icon" src={props.icon} />
+    <img className="contact__icon" src={props.icon} alt={props.alt} />
 
     <h3 className="contact__title">{props.title}</h3>
 
     <p className="contact__body">
       {props.body.split(props.link.keyword)[0]}
-      <a className="contact__body-link" href={props.link.url} target="_blank">
+      <a
+        className="contact__body-link"
+        href={props.link.url}
+        target="_blank"
+        rel="noopener"
+      >
         {props.link.title}
       </a>
       {props.body.split(props.link.keyword)[1]}
