@@ -52,7 +52,6 @@ const Button: NextPage<ButtonProps> = (props) => (
         transition-duration: 400ms;
         transition-timing-function: cubic-bezier(0.78, 1.93, 0.37, 0.74);
         will-change: transform box-shadow;
-        backface-visibility: hidden;
         transform: scale(1);
       }
       .button:hover {
