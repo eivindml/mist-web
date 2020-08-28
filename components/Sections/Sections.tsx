@@ -55,34 +55,58 @@ const Sections: NextPage = () => {
       )}
 
       <div className="sections">
-        <Section
-          alternate={false}
-          title="I happily do collaborative projects with others."
-          alt="Illustration showing logos from some of the companies I've worked with."
-          illustration="illustration-clients"
-          body="I have collaborated with lots of talented agencies, and would like to do more of it. If you have a project that needs a developer, whether its an app for the Apple ecosystem or a website, feel free to get in touch."
-          link={{
-            title: "View my services",
-            url: "/",
-          }}
-          handleOpen={handleOpen(State.ShowServices)}
-        />
-        <Section
-          alternate={true}
-          title="The rest of my time is spent creating my own projects."
-          alt="Illustration showing a 3D render of an app icon."
-          body="My passion lies in solving everyday issues and creating high quality and delightful native apps for the Apple ecosystem. Part of my time is spent doing exactly this."
-          illustration="illustration-apps"
-          link={{
-            title: "Play with my apps",
-            url: "/",
-          }}
-          handleOpen={handleOpen(State.ShowApps)}
-        />
+        <div className="sections__section">
+          <Section
+            alternate={false}
+            title="I happily do collaborative projects with others."
+            alt="Illustration showing logos from some of the companies I've worked with."
+            illustration="illustration-clients"
+            body="I have collaborated with lots of talented agencies, and would like to do more of it. If you have a project that needs a developer, whether its an app for the Apple ecosystem or a website, feel free to get in touch."
+            link={{
+              title: "View my services",
+              url: "/",
+            }}
+            handleOpen={handleOpen(State.ShowServices)}
+          />
+        </div>
+        <div className="sections__section">
+          <Section
+            alternate={true}
+            title="The rest of my time is spent creating my own projects."
+            alt="Illustration showing a 3D render of an app icon."
+            body="My passion lies in solving everyday issues and creating high quality and delightful native apps for the Apple ecosystem. Part of my time is spent doing exactly this."
+            illustration="illustration-apps"
+            link={{
+              title: "Play with my apps",
+              url: "/",
+            }}
+            handleOpen={handleOpen(State.ShowApps)}
+          />
+        </div>
         <style jsx>{`
           .sections {
             display: grid;
             grid-gap: calc(var(--line-height) * 5);
+          }
+
+          .sections__section {
+            animation-duration: 500ms;
+            animation-timing-function: ease-out-out;
+            animation-delay: 3s;
+            animation-name: fadeInAndSlideUp;
+            opacity: 0;
+            animation-fill-mode: forwards;
+          }
+
+          @keyframes fadeInAndSlideUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0px);
+            }
           }
         `}</style>
       </div>

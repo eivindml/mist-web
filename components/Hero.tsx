@@ -33,6 +33,13 @@ const Hero: NextPage = () => (
         top: calc(var(--line-height) * 2);
         height: var(--line-height);
         display: block;
+        
+        animation-duration: 1s; 
+        animation-timing-function: ease-out-out; 
+        animation-delay: 2s; 
+        animation-name: fadeIn;
+        opacity: 0;
+        animation-fill-mode: forwards;
       }
 
       .hero__container {
@@ -51,13 +58,27 @@ const Hero: NextPage = () => (
         margin-left: -50vw;
         left: 50%;
         z-index: 1;
+        
+        animation-duration: 1s; 
+        animation-timing-function: ease-out; 
+        animation-delay: 0s; 
+        animation-name: fadeIn;
+        opacity: 0;
+        animation-fill-mode: forwards;
       }
+      
 
       .hero__title {
         font-weight: 900;
         line-height: 32px;
         grid-column: 1 / 12;
         font-size: 26px;
+        animation-duration: 1s; 
+        animation-timing-function: ease-in-out; 
+        animation-delay: 1s; 
+        animation-name: fadeInAndSlideUp;
+        opacity: 0;
+        animation-fill-mode: forwards;
       }
       @media(min-width: 490px) {
         .hero__title {
@@ -91,6 +112,27 @@ const Hero: NextPage = () => (
         display: inline-block;
         white-space: nowrap;
       }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fadeInAndSlideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+      
     `}</style>
   </div>
 );
