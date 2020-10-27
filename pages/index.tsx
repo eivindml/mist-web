@@ -23,6 +23,7 @@ const Home: NextPage = () => (
     <style jsx>{`
       .home__main {
         background-color: #fffefa;
+        background-color: color(display-p3 1 1 0.98);
         min-height: 100vh;
         box-shadow: 0px 10px 75px black;
         z-index: 2;
