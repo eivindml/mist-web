@@ -52,7 +52,7 @@ const Values: NextPage = () => {
             All products are handcrafted with love and attention to details.
           </h2>
 
-          <p className="values__body">
+          <p className="values__body text-sm">
             An artisan is a skilled craft worker making material objects by
             hand, with a pride in one's own work, and a respect for tools and
             materials. I'm inspired by this tradition, and want to translate

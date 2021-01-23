@@ -17,7 +17,7 @@ const Button: NextPage<ButtonProps> = (props) => (
     })}
   >
     {props.onClick && (
-      <div className="button__wrapper" onClick={props.onClick}>
+      <div className="button__wrapper text-sm" onClick={props.onClick}>
         {props.title}
       </div>
     )}

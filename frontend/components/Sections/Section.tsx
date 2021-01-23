@@ -21,7 +21,7 @@ const Section: NextPage<SectionProps> = (props) => {
       <div className={cs("section", { "section--alternate": props.alternate })}>
         <div className="section__text">
           <h2 className="section__title">{props.title}</h2>
-          <p className="section__body">{props.body}</p>
+          <p className="section__body text-sm">{props.body}</p>
           <div className="section__action">
             <Button title={props.link.title} onClick={props.handleOpen} />
           </div>

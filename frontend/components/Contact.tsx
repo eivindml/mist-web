@@ -16,9 +16,9 @@ const Contact: NextPage<ContactProps> = (props) => (
   <div className="contact">
     <img className="contact__icon" src={props.icon} alt={props.alt} />
 
-    <h3 className="contact__title">{props.title}</h3>
+    <h3 className="contact__title text-sm">{props.title}</h3>
 
-    <p className="contact__body">
+    <p className="contact__body text-sm">
       {props.body.split(props.link.keyword)[0]}
       <a
         className="contact__body-link"

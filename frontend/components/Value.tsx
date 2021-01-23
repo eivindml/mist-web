@@ -10,7 +10,7 @@ const Value: NextPage<ValueProps> = (props) => (
   <div className="value">
     <img className="value__icon" src={props.icon} alt={props.alt} />
 
-    <p className="value__text">{props.text}</p>
+    <p className="text-sm">{props.text}</p>
 
     <style jsx>{`
       .value__icon {
