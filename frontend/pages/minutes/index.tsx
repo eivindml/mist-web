@@ -4,9 +4,35 @@ import SignUp from "components/SignUp";
 import Link from "next/link";
 import Header from "components/LandingPage/Header";
 import Text from "components/LandingPage/Text";
+import { NextSeo } from "next-seo";
 
 const Minutes: NextPage = () => (
   <div>
+    <NextSeo
+      title="Minutes for iOS and macOS"
+      description="A native iOS and macOS time tracker for freelancers and small businesses."
+      canonical="https://madebymist.com/minutes"
+      openGraph={{
+        url: "https://madebymist.com/minutes",
+        title: "Minutes for iOS and macOS",
+        description:
+          "A native iOS and macOS time tracker for freelancers and small businesses.",
+        images: [
+          {
+            url: "https://madebymist.com/minutes-social.png",
+            width: 1200,
+            height: 600,
+            alt: "Minutes for iOS and macOS",
+          },
+        ],
+        site_name: "Mist",
+      }}
+      twitter={{
+        handle: "@eivindml",
+        site: "@eivindml",
+        cardType: "summary_large_image",
+      }}
+    />
     <div className="home__main m-2 rounded-md p-4 py-8">
       <div className="max-w-md m-auto">
         <Header />

@@ -7,6 +7,7 @@ function Header() {
           width={169}
           height={169}
           className="transform hover:scale-105 hover:rotate-12 transition-transform duration-700 ease-in-out"
+          alt="Minutes for iOS and macOS app icon"
         />
       </div>
 
