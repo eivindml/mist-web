@@ -11,7 +11,9 @@ const SignUp: NextPage = () => {
   const [email, setEmail] = useState<null | string>(null);
   const [status, setStatus] = useState<Status | null>(null);
 
-  async function handleClick(e: React.ChangeEvent<HTMLInputElement>) {
+  async function handleClick(
+    e: React.MouseEvent<HTMLInputElement, MouseEvent>
+  ) {
     e.preventDefault();
     fetch("/api/signup", {
       method: "POST",
