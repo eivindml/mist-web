@@ -1,40 +1,31 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import Layout from "components/Layout";
 import SignUp from "components/SignUp";
 import Link from "next/link";
 import Header from "components/LandingPage/Header";
 
 const Minutes: NextPage = () => (
   <div>
-    <div className="home__main">
-      <Layout>
+    <div className="home__main inset-2 rounded-md p-4">
+      <div className="max-w-md m-auto">
         <Header />
-        <SignUp />
-      </Layout>
-      <Link href="/">
-        <a className="home__logo">
-          <Image src="/logo-small.png" width={51} height={26} />
-        </a>
-      </Link>
+        <div className="mt-16">
+          <SignUp />
+        </div>
+        <Link href="/">
+          <a className="home__logo">
+            <Image src="/logo-small.png" width={51} height={26} />
+          </a>
+        </Link>
+      </div>
     </div>
     <style jsx>{`
       .home__main {
         background-color: #fffefa;
         background-color: color(display-p3 1 1 0.98);
         background-color: #fcfaf4;
-        min-height: calc(100vh - (var(--line-height) * 10) - 13px - 13px);
         z-index: 2;
-        position: relative;
-        padding-bottom: calc(var(--line-height) * 10);
-        border-radius: 13px;
-        margin: 13px;
-         {
-          /* display: grid;
-        grid-gap: calc(var(--line-height) * 2);
-        margin-bottom: calc(var(--line-height) * 5);
-        grid-template-columns: repeat(12, 1fr); */
-        }
+        position: fixed;
       }
 
       .home__logo {

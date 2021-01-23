@@ -1,44 +1,60 @@
 import { useState } from "react";
 import { NextPage } from "next";
+import cs from "classnames";
+
+type Status = {
+  message: String;
+  isError: boolean;
+};
 
 const SignUp: NextPage = () => {
   const [email, setEmail] = useState<null | string>(null);
-  const [statusMessage, setStatusMessage] = useState("");
+  const [status, setStatus] = useState<Status | null>(null);
 
-  async function handleClick(e) {
+  async function handleClick(e: React.ChangeEvent<HTMLInputElement>) {
     e.preventDefault();
     fetch("/api/signup", {
-      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      method: "POST",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email }), // body data type must match "Content-Type" header
+      body: JSON.stringify({ email }),
     })
       .then((res) => {
         if (res.status === 201) {
-          console.log("success", res.status);
-          setStatusMessage("Successfully registered");
+          setStatus({
+            message:
+              "You will hear from us when we have something ready for you. 🥳",
+            isError: false,
+          });
         } else {
-          console.log("error", res.status);
-          setStatusMessage("Unsuccessfully");
+          setStatus({
+            message:
+              "There where some problems with the signup. Make sure the email is correct, or that you haven't already signed up. 🧐",
+            isError: true,
+          });
         }
       })
       .catch((error) => {
-        console.log("error", error);
-        setStatusMessage("Error" + error);
+        console.warn(error);
+        setStatus({
+          message:
+            "There where some problems with the signup. Make sure the email is correct, or that you haven't already signed up. 🧐",
+          isError: true,
+        });
       });
   }
 
-  function handleChange(e) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setEmail(e.target.value);
   }
 
   return (
-    <div className="signup">
-      <form className="signup__form">
+    <div className="">
+      <form className="flex">
         <input
-          className="signup__input"
+          className="rounded-lg bg-transparent-light-gray  py-2 px-4 mr-4 w-full text-black"
           type="email"
           id="email"
           name="email"
@@ -46,50 +62,22 @@ const SignUp: NextPage = () => {
           onChange={handleChange}
         />
         <input
-          className="signup__button"
+          className="text-white bg-black py-2 px-4 rounded-lg cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-x-1 will-change-transform"
           type="submit"
           value="Notify me"
           onClick={handleClick}
         />
       </form>
-      <p className="signup__message">{statusMessage}</p>
-      <style jsx>{`
-        .signup__form {
-          display: flex;
-          height: calc(var(--line-height) * 5);
-        }
-
-        .signup__input {
-          margin-right: calc(var(--line-height) * 4);
-          flex-grow: 1;
-          border: none;
-          border-radius: var(--line-height);
-          padding: 0 calc(var(--line-height) * 2);
-          background-color: rgba(18, 18, 17, 0.05);
-          color: rgba(18, 18, 17, 0.3);
-        }
-
-        .signup__button {
-          background-color: orange;
-          width: calc(var(--line-height) * 14);
-          border-radius: var(--line-height);
-          border: none;
-          background-color: #121211;
-          color: #fcfaf4;
-        }
-
-        .signup__message {
-          text-align: center;
-          margin-top: 0.5em;
-        }
-
-        .signup__message--error {
-          color: #e64c4c;
-        }
-        .signup__message--success {
-          color: #8adc33;
-        }
-      `}</style>
+      {status && (
+        <p
+          className={cs("text-center mt-4", {
+            "text-red": status.isError,
+            "": !status.isError,
+          })}
+        >
+          {status.message}
+        </p>
+      )}
     </div>
   );
 };
