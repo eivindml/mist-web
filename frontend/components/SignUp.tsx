@@ -54,7 +54,7 @@ const SignUp: NextPage = () => {
 
   return (
     <div className="">
-      <form className="flex">
+      <form className="flex flex-col sm:flex-row">
         <input
           className="rounded-lg bg-transparent-light-gray  py-2 px-4 mr-4 w-full text-black"
           type="email"
@@ -64,7 +64,7 @@ const SignUp: NextPage = () => {
           onChange={handleChange}
         />
         <input
-          className="text-white bg-black py-2 px-4 rounded-lg cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-x-1 will-change-transform"
+          className="text-white bg-black py-2 px-4 rounded-lg cursor-pointer transform transition-transform duration-300 ease-in-out hover:translate-x-1 will-change-transform mt-2 sm:mt-0"
           type="submit"
           value="Notify me"
           onClick={handleClick}

@@ -1,0 +1,120 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="832" height="836" viewBox="0 0 832 836">
+  <defs>
+    <linearGradient id="minutes-icon-b" x1="50%" x2="50%" y1="20.215%" y2="84.797%">
+      <stop offset="0%" stop-color="#FFED48"/>
+      <stop offset="100%" stop-color="#FFCB00"/>
+    </linearGradient>
+    <path id="minutes-icon-a" d="M712.825244,13.9426222 C671.5488,0 644.642844,0 548.764089,0 L283.231289,0 C187.352533,0 160.4512,0 119.174756,13.9426222 C70.3733333,31.8655333 31.7130667,70.7116667 13.8759111,119.743067 C0,161.2226 0,188.253267 0,284.592978 L0,551.402378 C0,647.742089 0,674.7774 13.8759111,716.252289 C31.7130667,765.283689 70.3733333,804.134467 119.174756,822.052733 C160.4512,836 187.352533,836 283.231289,836 L548.764089,836 C644.642844,836 671.5488,836 712.825244,822.052733 C761.622044,804.134467 800.286933,765.283689 818.119467,716.252289 C832,674.7774 832,647.742089 832,551.402378 L832,284.592978 C832,188.253267 832,161.2226 818.119467,119.743067 C800.286933,70.7116667 761.622044,31.8655333 712.825244,13.9426222"/>
+    <linearGradient id="minutes-icon-c" x1="50%" x2="50%" y1="20.215%" y2="84.797%">
+      <stop offset="0%" stop-color="#FFED48"/>
+      <stop offset="100%" stop-color="#FFCB00"/>
+    </linearGradient>
+    <linearGradient id="minutes-icon-e" x1="50%" x2="50%" y1="12.781%" y2="109.741%">
+      <stop offset="0%" stop-color="#FFF8BB"/>
+      <stop offset="100%" stop-color="#E99F00"/>
+    </linearGradient>
+    <linearGradient id="minutes-icon-f" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <filter id="minutes-icon-g" width="134%" height="131.5%" x="-17%" y="-15.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="39"/>
+    </filter>
+    <linearGradient id="minutes-icon-h" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <filter id="minutes-icon-i" width="102.6%" height="102.6%" x="-1.3%" y="-1.3%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+    <radialGradient id="minutes-icon-j" cx="50%" cy="51.349%" r="68.052%" fx="50%" fy="51.349%" gradientTransform="matrix(0 1 -1.012 0 1.02 .013)">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="58.228%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#E4E0D5"/>
+    </radialGradient>
+    <radialGradient id="minutes-icon-l" cx="50%" cy="51.349%" r="68.052%" fx="50%" fy="51.349%" gradientTransform="matrix(0 1 -1.012 0 1.02 .013)">
+      <stop offset="0%" stop-color="#FFF"/>
+      <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+    </radialGradient>
+    <circle id="minutes-icon-k" cx="344" cy="380" r="332"/>
+    <linearGradient id="minutes-icon-m" x1="50%" x2="79.28%" y1="51.349%" y2="90.416%">
+      <stop offset="0%" stop-color="#FDF7B9" stop-opacity=".066"/>
+      <stop offset="100%" stop-color="#FFDB63"/>
+    </linearGradient>
+    <filter id="minutes-icon-n" width="106.3%" height="106.3%" x="-3.2%" y="-3.2%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7"/>
+    </filter>
+    <linearGradient id="minutes-icon-p" x1="50%" x2="97.965%" y1="51.349%" y2="70.547%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".066"/>
+      <stop offset="100%" stop-color="#FFF" stop-opacity=".976"/>
+      <stop offset="100%" stop-color="#FFF163"/>
+    </linearGradient>
+    <filter id="minutes-icon-q" width="102.7%" height="102.7%" x="-1.4%" y="-1.4%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+    <linearGradient id="minutes-icon-r" x1="55.099%" x2="50%" y1="108.901%" y2="30.723%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFF"/>
+    </linearGradient>
+    <filter id="minutes-icon-s" width="114.5%" height="122.8%" x="-7.2%" y="-11.4%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16"/>
+    </filter>
+    <linearGradient id="minutes-icon-t" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="100%"/>
+    </linearGradient>
+    <filter id="minutes-icon-u" width="106.1%" height="91.1%" x="-3%" y="4.5%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+    <linearGradient id="minutes-icon-v" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-opacity="0"/>
+      <stop offset="98.368%"/>
+    </linearGradient>
+    <filter id="minutes-icon-w" width="112.2%" height="112.2%" x="-6.1%" y="-6.1%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    <filter id="minutes-icon-x" width="126.8%" height="126.8%" x="-13.4%" y="-13.4%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+    <linearGradient id="minutes-icon-y" x1="50%" x2="50%" y1="0%" y2="78.229%">
+      <stop offset="0%" stop-color="#DAAE00" stop-opacity="0"/>
+      <stop offset="99.734%" stop-color="#C9A20E"/>
+    </linearGradient>
+    <filter id="minutes-icon-z" width="129%" height="147.4%" x="-14.5%" y="-23.7%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="30"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="minutes-icon-d" fill="#fff">
+      <use xlink:href="#minutes-icon-a"/>
+    </mask>
+    <use fill="url(#minutes-icon-b)" xlink:href="#minutes-icon-a"/>
+    <path fill="url(#minutes-icon-c)" d="M707.117067,21.6757778 C666.6344,8 640.245867,8 546.210933,8 L285.784533,8 C191.7496,8 165.3656,8 124.882933,21.6757778 C77.02,39.2556667 39.1032,77.3583333 21.6090667,125.451333 C8,166.137 8,192.650333 8,287.146222 L8,548.849222 C8,643.345111 8,669.863 21.6090667,710.544111 C39.1032,758.637111 77.02,796.744333 124.882933,814.319667 C165.3656,828 191.7496,828 285.784533,828 L546.210933,828 C640.245867,828 666.6344,828 707.117067,814.319667 C754.975467,796.744333 792.8968,758.637111 810.3864,710.544111 C824,669.863 824,643.345111 824,548.849222 L824,287.146222 C824,192.650333 824,166.137 810.3864,125.451333 C792.8968,77.3583333 754.975467,39.2556667 707.117067,21.6757778" mask="url(#minutes-icon-d)"/>
+    <path fill="url(#minutes-icon-e)" d="M557.209201,2.00037465 C646.270135,2.01248832 672.787093,2.41627733 712.825244,15.8759111 C761.622044,33.7130667 800.286933,72.3733333 818.119467,121.170133 C831.722389,161.625579 831.994448,188.270728 831.999889,279.56067 L831.999889,556.434714 C831.994448,647.724831 831.722389,674.374329 818.119467,714.825244 C800.286933,763.622044 761.622044,802.286933 712.825244,820.119467 C672.374329,833.722389 645.724831,833.994448 554.434714,833.999889 L277.56067,833.999889 C186.27073,833.994448 159.625671,833.722389 119.174756,820.119467 C70.3733333,802.286933 31.7130667,763.622044 13.8759111,714.825244 C0.416277333,674.787093 0.01248832,648.270135 0.000374649604,559.209201 L0.000374649604,276.786189 C0.01248832,187.725512 0.416277333,161.212768 13.8759111,121.170133 C31.7130667,72.3733333 70.3733333,33.7130667 119.174756,15.8759111 C159.212907,2.41627733 185.725516,2.01248832 274.786189,2.00037465 Z M554.493639,8.00036925 L277.50184,8.00036925 C190.153871,8.0123082 164.15112,8.41027333 124.882933,21.6757778 C77.02,39.2556667 39.1032,77.3583333 21.6090667,125.451333 C8.408272,164.91643 8.01224816,191.046778 8.00036744,278.822927 L8.00036744,557.172529 C8.01224816,644.948931 8.408272,671.083433 21.6090667,710.544111 C39.1032,758.637111 77.02,796.744333 124.882933,814.319667 C164.555947,827.726393 190.688601,827.994528 280.222964,827.999891 L551.772508,827.999891 C641.307046,827.994528 667.444053,827.726393 707.117067,814.319667 C754.975467,796.744333 792.8968,758.637111 810.3864,710.544111 C823.727728,670.676622 823.994555,644.411492 823.999891,554.438059 L823.999891,281.557391 C823.994555,191.584131 823.727728,165.323287 810.3864,125.451333 C792.8968,77.3583333 754.975467,39.2556667 707.117067,21.6757778 C667.84888,8.41027333 641.841863,8.0123082 554.493639,8.00036925 Z" mask="url(#minutes-icon-d)"/>
+    <g mask="url(#minutes-icon-d)">
+      <g transform="translate(72 38)">
+        <ellipse cx="344" cy="372" fill="url(#minutes-icon-f)" filter="url(#minutes-icon-g)" opacity=".404" rx="344" ry="372"/>
+        <circle cx="344" cy="376" r="344" fill="url(#minutes-icon-h)" filter="url(#minutes-icon-i)" opacity=".044"/>
+        <circle cx="344" cy="380" r="332" fill="url(#minutes-icon-j)"/>
+        <mask id="minutes-icon-o" fill="#fff">
+          <use xlink:href="#minutes-icon-k"/>
+        </mask>
+        <use fill="url(#minutes-icon-l)" xlink:href="#minutes-icon-k"/>
+        <path fill="url(#minutes-icon-m)" d="M348.481928,52.3373494 C531.654152,52.3373494 680.144578,200.827776 680.144578,384 C680.144578,567.172224 531.654152,715.662651 348.481928,715.662651 C165.309704,715.662651 16.8192771,567.172224 16.8192771,384 C16.8192771,200.827776 165.309704,52.3373494 348.481928,52.3373494 Z M348.481928,65.7831325 C172.735605,65.7831325 30.2650602,208.253677 30.2650602,384 C30.2650602,559.746323 172.735605,702.216867 348.481928,702.216867 C524.228251,702.216867 666.698795,559.746323 666.698795,384 C666.698795,208.253677 524.228251,65.7831325 348.481928,65.7831325 Z" filter="url(#minutes-icon-n)" mask="url(#minutes-icon-o)" transform="rotate(4 348.482 384)"/>
+        <path fill="url(#minutes-icon-p)" d="M346.240964,52.3373494 C528.175538,52.3373494 675.662651,199.824462 675.662651,381.759036 C675.662651,563.69361 528.175538,711.180723 346.240964,711.180723 C164.30639,711.180723 16.8192771,563.69361 16.8192771,381.759036 C16.8192771,199.824462 164.30639,52.3373494 346.240964,52.3373494 Z M346.240964,65.6922826 C171.682116,65.6922826 30.1742104,207.200188 30.1742104,381.759036 C30.1742104,556.317884 171.682116,697.82579 346.240964,697.82579 C520.799812,697.82579 662.307717,556.317884 662.307717,381.759036 C662.307717,207.200188 520.799812,65.6922826 346.240964,65.6922826 Z" filter="url(#minutes-icon-q)" mask="url(#minutes-icon-o)" opacity=".77" transform="rotate(-135 346.241 381.759)"/>
+        <path fill="url(#minutes-icon-r)" d="M306.37841,410.917891 C489.736947,410.917891 638.37841,569.317211 638.37841,385.958675 C638.37841,202.600138 489.736947,53.9586745 306.37841,53.9586745 C123.019873,53.9586745 -25.6215902,202.600138 -25.6215902,385.958675 C-25.6215902,569.317211 123.019873,410.917891 306.37841,410.917891 Z" filter="url(#minutes-icon-s)" mask="url(#minutes-icon-o)" opacity=".426" transform="rotate(-18 306.378 264.213)"/>
+        <g mask="url(#minutes-icon-o)">
+          <g transform="translate(239.807 209.13)">
+            <path fill="url(#minutes-icon-t)" d="M107.197375,74.8600602 L299.697911,116.882294 C311.437599,119.445029 319.807229,129.838822 319.807229,141.854973 C319.807229,153.871125 311.437599,164.264917 299.697911,166.827653 L107.197375,208.849887 C70.1971061,216.926924 33.6547296,193.480011 25.5776926,156.479743 C24.52894,151.67549 24,146.772364 24,141.854973 C24,103.983369 54.7010014,73.2823676 92.5726058,73.2823676 C97.4899963,73.2823676 102.393122,73.8113076 107.197375,74.8600602 Z" filter="url(#minutes-icon-u)" opacity=".453" transform="rotate(-25 171.904 141.855)"/>
+            <path fill="#4D4C49" d="M109.874535,73.3310143 L294.221625,113.515666 C305.439682,115.961019 313.438722,125.891559 313.438722,137.373046 C313.438722,148.854533 305.439682,158.785072 294.221625,161.230425 L109.874535,201.415077 C74.5050974,209.125036 39.5823466,186.702599 31.8723875,151.333162 C30.8726922,146.74706 30.3685066,142.066842 30.3685066,137.373046 C30.3685066,101.173038 59.7144111,71.8271334 95.9144189,71.8271334 C100.608215,71.8271334 105.288433,72.3313191 109.874535,73.3310143 Z" transform="rotate(-25 171.904 137.373)"/>
+            <circle cx="104.609" cy="169.179" r="49.301" fill="url(#minutes-icon-v)" filter="url(#minutes-icon-w)" opacity=".796" transform="rotate(-25 104.609 169.179)"/>
+            <circle cx="104.609" cy="169.179" r="44.736" fill="#75726F" transform="rotate(-25 104.609 169.179)"/>
+            <circle cx="104.609" cy="169.179" r="22.41" fill="url(#minutes-icon-v)" filter="url(#minutes-icon-x)" opacity=".795" transform="rotate(-25 104.609 169.179)"/>
+            <circle cx="104.609" cy="169.179" r="20.054" fill="#B4AEAA" transform="rotate(-25 104.609 169.179)"/>
+          </g>
+        </g>
+        <path fill="url(#minutes-icon-y)" d="M405.524943,691.680894 C576.293345,690.83535 741.393324,516.333371 705.294652,356.786237 C669.195979,197.239104 696.830013,507.838475 466.621676,547.74601 C236.41334,587.653544 68.7637431,357.40351 91.7452833,463.171433 C114.726824,568.939356 234.756541,692.526437 405.524943,691.680894 Z" filter="url(#minutes-icon-z)" mask="url(#minutes-icon-o)" opacity=".23" transform="rotate(-23 399.971 501.616)"/>
+      </g>
+    </g>
+  </g>
+</svg>

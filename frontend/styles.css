@@ -3,22 +3,6 @@ body {
   background-color: color(display-p3 1 1 0.98);
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-body,
-html,
-input {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 300;
-}
-
 :root {
   --line-height: 26px;
 }
@@ -28,6 +12,10 @@ input {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  font-size: 23px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,5 +23,10 @@ input {
 @layer utilities {
   .will-change-transform {
     will-change: transform;
+  }
+
+  ,
+  .rotate-z {
+    transform: rotateZ(90deg);
   }
 }
