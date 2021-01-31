@@ -46,9 +46,9 @@ const Values: NextPage = () => {
         />
       </Modal>
 
-      <div className="values">
+      <div className="max-w-screen-sm mx-auto">
         <div className="values__cell">
-          <h2 className="values__heading">
+          <h2 className="values__heading max-w-xl">
             All products are handcrafted with love and attention to details.
           </h2>
 
@@ -88,25 +88,6 @@ const Values: NextPage = () => {
         </div>
 
         <style jsx>{`
-          .values {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-          }
-
-          .values__cell {
-            grid-column: span 12;
-          }
-          @media (min-width: 540px) {
-            .values__cell {
-              grid-column: 2 / span 10;
-            }
-          }
-          @media (min-width: 1000px) {
-            .values__cell {
-              grid-column: 4 / span 6;
-            }
-          }
-
           .values__heading {
             font-size: 33px;
             line-height: 39px;

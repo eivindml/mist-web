@@ -54,7 +54,7 @@ const Sections: NextPage = () => {
         </Modal>
       )}
 
-      <div className="sections">
+      <div className="sections max-w-screen-lg mx-auto">
         <div className="sections__section">
           <Section
             alternate={false}
@@ -69,7 +69,7 @@ const Sections: NextPage = () => {
             handleOpen={handleOpen(State.ShowServices)}
           />
         </div>
-        <div className="sections__section">
+        <div className="sections__section max-w-screen-lg mx-auto">
           <Section
             alternate={true}
             title="The rest of my time is spent creating my own projects."
