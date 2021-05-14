@@ -5,7 +5,7 @@ const Hero: NextPage = () => (
   <div className="hero">
     <div className="hero__animation">{/* <Mist /> */}</div>
     <div className="hero__container mx-auto">
-      <h1 className="hero__title font-black text-5xl">
+      <h1 className="hero__title font-black text-6xl">
         Mist is a one-man studio
         <br />
         handcrafting apps

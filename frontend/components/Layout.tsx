@@ -48,7 +48,7 @@ const Layout: NextPage<LayoutProps> = (props) => {
               <MenuItem title="Apps" iconUrl="/app.png" href="/apps" />
             </li>
             <li className="flex-grow-0 flex-shrink-0">
-              <MenuItem title="Posts" iconUrl="/document.png" href="/posts" />
+              <MenuItem title="Texts" iconUrl="/document.png" href="/text" />
             </li>
             <li className="bg-gradient-to-r from-transparent-beige to-beige absolute w-16 h-4 right-0"></li>
           </ul>

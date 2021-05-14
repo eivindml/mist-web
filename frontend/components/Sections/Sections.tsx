@@ -60,10 +60,10 @@ const Sections: NextPage = () => {
             alternate={false}
             title="I happily do collaborative projects with others."
             alt="Illustration showing logos from some of the companies I've worked with."
-            illustration="illustration-clients"
+            illustration="collab"
             body="I have collaborated with lots of talented agencies, and would like to do more of it. If you have a project that needs a developer, whether its an app for the Apple ecosystem or a website, feel free to get in touch."
             link={{
-              title: "View my services",
+              title: "View services",
               url: "/",
             }}
             handleOpen={handleOpen(State.ShowServices)}
@@ -75,9 +75,9 @@ const Sections: NextPage = () => {
             title="The rest of my time is spent creating my own projects."
             alt="Illustration showing a 3D render of an app icon."
             body="My passion lies in solving everyday issues and creating high quality and delightful native apps for the Apple ecosystem. Part of my time is spent doing exactly this."
-            illustration="illustration-apps"
+            illustration="apps"
             link={{
-              title: "Play with my apps",
+              title: "Play with apps",
               url: "/",
             }}
             handleOpen={handleOpen(State.ShowApps)}
@@ -86,7 +86,7 @@ const Sections: NextPage = () => {
         <style jsx>{`
           .sections {
             display: grid;
-            grid-gap: calc(var(--line-height) * 5);
+            grid-gap: calc(var(--line-height) * 10);
           }
 
           .sections__section {

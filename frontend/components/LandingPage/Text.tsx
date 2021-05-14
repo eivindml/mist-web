@@ -1,7 +1,7 @@
 function Text() {
   return (
     <div className="">
-      <h2 className="font-extrabold text-2xl mb-4 text-gradient">
+      <h2 className="font-extrabold text-3xl mb-6 text-gradient">
         Time tracking finally done right.
         <br />
         Enjoyable and delightful.

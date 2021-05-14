@@ -32,10 +32,12 @@ export default async (
 
 const postsQuery = `*[_type == "post"] {
   _id,
+  "slug": slug.current,
   title,
   description,
   published,
-  article
+  article,
+  "poster": poster.asset->
 }`;
 
 export function getPosts(): TaskEither<Error, Array<Post>> {

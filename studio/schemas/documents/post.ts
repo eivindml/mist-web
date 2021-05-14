@@ -19,6 +19,29 @@ export default {
       },
     },
     {
+      title: "Poster",
+      name: "poster",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "caption",
+          type: "string",
+          title: "Caption",
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: "attribution",
+          type: "string",
+          title: "Attribution",
+        },
+      ],
+    },
+    {
       title: "Description",
       name: "description",
       type: "text",

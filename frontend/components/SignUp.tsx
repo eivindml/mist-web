@@ -70,16 +70,7 @@ const SignUp: NextPage = () => {
           onClick={handleClick}
         />
       </form>
-      {status && (
-        <p
-          className={cs("text-center mt-4", {
-            "text-red": status.isError,
-            "": !status.isError,
-          })}
-        >
-          {status.message}
-        </p>
-      )}
+      {status && <p className={cs("text-center mt-4 ")}>{status.message}</p>}
     </div>
   );
 };
