@@ -2,7 +2,8 @@ import { NextPage } from "next";
 import useScroll from "lib/useScroll";
 import cs from "classnames";
 import Link from "next/link";
-import Footer from "../components/Footer";
+import Footer from "components/Footer";
+import Image from "next/image";
 
 interface LayoutProps {
   children: any;
@@ -16,42 +17,57 @@ const Layout: NextPage<LayoutProps> = (props) => {
     <>
       <div
         className={cs(
-          "l sticky border-b border-solid  -top-4 z-10 transition ease-in-out duration-1000",
+          "l sticky border-b border-solid -top-4 z-10 transition ease-in-out duration-1000",
           {
             "border-beige": scrollY <= 100,
             "border-gray-200": scrollY > 100,
           }
         )}
       >
-        <div className="max-w-screen-xl mx-auto flex items-center py-4 pt-8">
-          <img
-            src="/logo.png"
-            className="h-6 block mr-20"
-            alt="Logo for Mist, consisting of a mountain and some mist flowing by."
-          />
-          <ul
+        <div className="max-w-screen-xl mx-auto flex items-center pt-4 px-4">
+          <Link href="/">
+            <a className="h-6 w-12 block relative flex-grow-0 flex-shrink-0 mr-20">
+              <Image
+                src="/logo.png"
+                className=""
+                loading="eager"
+                alt="Logo for Mist, consisting of a mountain and some mist flowing by."
+                layout="fill"
+              />
+            </a>
+          </Link>
+
+          <div
             className={cs(
-              "relative w-0 overflow-hidden transition-width ease-in-out duration-1000 flex items-center space-x-16",
+              "w-0 relative transition-width ease-in-out duration-1000 overflow-hidden",
               {
                 "w-full": scrollY > 200 || props.alwaysShowMenu,
               }
             )}
           >
-            <li className="flex-grow-0 flex-shrink-0">
-              <MenuItem
-                title="Services"
-                iconUrl="/keyboard.png"
-                href="/services"
-              />
-            </li>
-            <li className="flex-grow-0 flex-shrink-0">
-              <MenuItem title="Apps" iconUrl="/app.png" href="/apps" />
-            </li>
-            <li className="flex-grow-0 flex-shrink-0">
-              <MenuItem title="Texts" iconUrl="/document.png" href="/text" />
-            </li>
-            <li className="bg-gradient-to-r from-transparent-beige to-beige absolute w-16 h-4 right-0"></li>
-          </ul>
+            <div className="overflow-x-scroll py-4">
+              <ul className={cs("flex items-center space-x-16")}>
+                <li className="flex-grow-0 flex-shrink-0">
+                  <MenuItem
+                    title="Services"
+                    iconUrl="/keyboard.png"
+                    href="/services"
+                  />
+                </li>
+                <li className="flex-grow-0 flex-shrink-0">
+                  <MenuItem title="Apps" iconUrl="/app.png" href="/minutes" />
+                </li>
+                <li className="flex-grow-0 flex-shrink-0 pr-4">
+                  <MenuItem
+                    title="Texts"
+                    iconUrl="/document.png"
+                    href="/text"
+                  />
+                </li>
+              </ul>
+              <div className="bg-gradient-to-r from-transparent-beige to-beige absolute w-16 h-full right-0 top-0"></div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="">

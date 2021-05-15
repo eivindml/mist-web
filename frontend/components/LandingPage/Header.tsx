@@ -1,13 +1,16 @@
+import Image from "next/image";
+
 function Header() {
   return (
-    <div className="md:flex md:items-center">
+    <div className="flex flex-col md:flex-row items-center">
       <div className="flex-grow-0 flex-shrink-0">
-        <img
+        <Image
           src="/minutes-icon.png"
           width={169}
           height={169}
           className="transform hover:scale-105 hover:rotate-12 transition-transform duration-700 ease-in-out"
           alt="Minutes for iOS and macOS app icon"
+          loading="eager"
         />
       </div>
 

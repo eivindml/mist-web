@@ -8,11 +8,15 @@ const Home: NextPage = () => (
   <div>
     <div className="home__main bg-beige">
       <Layout>
-        <Hero />
-        <div className="home__section">
+        <div className="mx-4">
+          <Hero />
+        </div>
+        <div className="home__section mx-4">
           <Sections />
         </div>
-        <Values />
+        <div className="mx-4">
+          <Values />
+        </div>
       </Layout>
     </div>
 

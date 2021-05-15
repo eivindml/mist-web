@@ -20,7 +20,7 @@ const Section: NextPage<SectionProps> = (props) => {
   return (
     <>
       <div className={cs("flex flex-row")}>
-        <div className="w-3/5">
+        <div className="md:w-3/5">
           <h2 className="text-black mb-8 text-4xl font-extrabold">
             {props.title}
           </h2>
@@ -30,9 +30,9 @@ const Section: NextPage<SectionProps> = (props) => {
           </div>
         </div>
         <div
-          className={cs("w-2/5", {
-            "order-first pr-32": props.alternate,
-            "pl-32": !props.alternate,
+          className={cs("w-full md:w-2/5", {
+            "order-first md:pr-32": props.alternate,
+            "md:pl-32": !props.alternate,
           })}
         >
           <Image

@@ -2,9 +2,8 @@ function Text() {
   return (
     <div className="">
       <h2 className="font-extrabold text-3xl mb-6 text-gradient">
-        Time tracking finally done right.
-        <br />
-        Enjoyable and delightful.
+        Time tracking finally&nbsp;done&nbsp;right. Enjoyable&nbsp;and
+        delightful.
       </h2>
       <p className="text-transparent-gray">
         Time tracking is an important part of our day. Unfortunately it's also
