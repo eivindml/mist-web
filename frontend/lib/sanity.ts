@@ -1,9 +1,9 @@
-import { createClient } from "next-sanity";
 import { parse } from "groq-js";
 import * as E from "fp-ts/lib/Either";
 import { tryCatch, TaskEither } from "fp-ts/lib/TaskEither";
+import sanityClient from "@sanity/client";
 
-export const client = createClient({
+export const client = sanityClient({
   projectId: process.env.SANITY_ID,
   dataset: process.env.SANITY_DATASET,
   token: process.env.SANITY_TOKEN,

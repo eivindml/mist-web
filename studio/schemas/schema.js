@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 import richText from "./objects/richText";
 
+import page from "./documents/page";
 import post from "./documents/post";
 import subscriber from "./documents/subscriber";
 
@@ -16,5 +17,5 @@ export default createSchema({
 
   // Then proceed to concatenate our document types (just one, for now)
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([richText, post, subscriber]),
+  types: schemaTypes.concat([richText, page, post, subscriber]),
 });

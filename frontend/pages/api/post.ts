@@ -12,12 +12,12 @@ import { chain, of, fold, TaskEither } from "fp-ts/lib/TaskEither";
  * API route for all Posts
  */
 export default async (
-  _: NextApiRequest,
-  res: NextApiResponse<Error | Array<Post>>
+  req: NextApiRequest,
+  res: NextApiResponse<Error | Post>
 ) => {
   return new Promise(
     pipe(
-      getPosts(),
+      getPost(req.body.slug),
       fold(
         (e) => of(res.status(400).end(e.message)),
         (v) => of(res.status(200).json(v))
@@ -30,7 +30,9 @@ export default async (
  * Handler for fetching Posts
  */
 
-const postQuery = `*[_type == "post" && _slug.current == $slug] {
+const postQuery = (
+  slug: string
+) => `*[_type == "post" && slug.current == ${slug}] {
   _id,
   "slug": slug.current,
   title,
@@ -40,6 +42,6 @@ const postQuery = `*[_type == "post" && _slug.current == $slug] {
   "poster": poster.asset->
 }[0]`;
 
-export function getPosts(): TaskEither<Error, Array<Post>> {
-  return pipe(fetch(postQuery), chain(decode(t.array(Post))));
+export function getPost(slug: string): TaskEither<Error, Post> {
+  return pipe(fetch(postQuery(slug)), chain(decode(Post)));
 }

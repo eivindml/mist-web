@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { NextPage } from "next";
+import { useRouter } from "next/router";
 import useScroll from "lib/useScroll";
 import cs from "classnames";
 import Link from "next/link";
@@ -8,10 +10,31 @@ import Image from "next/image";
 interface LayoutProps {
   children: any;
   alwaysShowMenu?: boolean;
+  noTopPadding?: boolean;
 }
 
 const Layout: NextPage<LayoutProps> = (props) => {
+  const router = useRouter();
+
   const scrollY = useScroll();
+  const [shouldMinimize, setShouldMinimize] = useState<boolean>(
+    props.alwaysShowMenu
+  );
+
+  function handleClick(e: any) {
+    if (router.pathname === "/") {
+      e.preventDefault();
+      setShouldMinimize(true);
+    }
+  }
+
+  useEffect(() => {
+    if (props.alwaysShowMenu) return;
+
+    if (scrollY <= 100 && shouldMinimize) setShouldMinimize(false);
+
+    if (scrollY > 100 && !shouldMinimize) setShouldMinimize(true);
+  }, [props.alwaysShowMenu, scrollY]);
 
   return (
     <>
@@ -19,14 +42,17 @@ const Layout: NextPage<LayoutProps> = (props) => {
         className={cs(
           "l sticky border-b border-solid -top-4 z-10 transition ease-in-out duration-1000",
           {
-            "border-beige": scrollY <= 100,
-            "border-gray-200": scrollY > 100,
+            "border-beige": !shouldMinimize || scrollY <= 100,
+            "border-gray-200": shouldMinimize && scrollY > 100,
           }
         )}
       >
         <div className="max-w-screen-xl mx-auto flex items-center pt-4 px-4">
           <Link href="/">
-            <a className="h-6 w-12 block relative flex-grow-0 flex-shrink-0 mr-20">
+            <a
+              className="h-6 w-12 block relative flex-grow-0 flex-shrink-0 mr-20"
+              onClick={handleClick}
+            >
               <Image
                 src="/logo.png"
                 className=""
@@ -39,9 +65,10 @@ const Layout: NextPage<LayoutProps> = (props) => {
 
           <div
             className={cs(
-              "w-0 relative transition-width ease-in-out duration-1000 overflow-hidden",
+              "relative transition-width ease-in-out duration-1000 overflow-hidden",
               {
-                "w-full": scrollY > 200 || props.alwaysShowMenu,
+                "w-0": !shouldMinimize,
+                "w-full": shouldMinimize,
               }
             )}
           >
@@ -55,7 +82,11 @@ const Layout: NextPage<LayoutProps> = (props) => {
                   />
                 </li>
                 <li className="flex-grow-0 flex-shrink-0">
-                  <MenuItem title="Apps" iconUrl="/app.png" href="/minutes" />
+                  <MenuItem
+                    title="Minutes"
+                    iconUrl="/app.png"
+                    href="/minutes"
+                  />
                 </li>
                 <li className="flex-grow-0 flex-shrink-0 pr-4">
                   <MenuItem
@@ -70,9 +101,14 @@ const Layout: NextPage<LayoutProps> = (props) => {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className="max-w-screen-xl m-auto pb-64">{props.children}</div>
+      <div
+        className={cs("max-w-screen-xl m-auto px-4 pb-64", {
+          "pt-32": !props.noTopPadding,
+        })}
+      >
+        {props.children}
       </div>
+
       <Footer />
       <style jsx>{`
         .l {

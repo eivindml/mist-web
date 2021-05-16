@@ -1,10 +1,9 @@
 import { NextPage } from "next";
-import Mist from "@eivindml/mist-animation";
 
 const Hero: NextPage = () => (
   <div className="hero">
     <div className="hero__animation">{/* <Mist /> */}</div>
-    <div className="hero__container mx-auto">
+    <div className="mx-auto">
       <h1 className="hero__title font-black text-2xl sm:text-4xl md:text-6xl">
         Mist is a one-man studio
         <br />

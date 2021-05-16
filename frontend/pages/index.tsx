@@ -6,25 +6,19 @@ import Values from "../components/Values";
 
 const Home: NextPage = () => (
   <div>
-    <div className="home__main bg-beige">
-      <Layout>
-        <div className="mx-4">
+    <div className="bg-beige">
+      <Layout noTopPadding>
+        <div className="">
           <Hero />
         </div>
-        <div className="home__section mx-4">
+        <div className="mb-32 md:mb-48 lg:mb-64">
           <Sections />
         </div>
-        <div className="mx-4">
+        <div className="">
           <Values />
         </div>
       </Layout>
     </div>
-
-    <style jsx>{`
-      .home__section {
-        margin-bottom: calc(var(--line-height) * 8);
-      }
-    `}</style>
   </div>
 );
 

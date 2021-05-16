@@ -1,12 +1,13 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import cs from "classnames";
 
 interface ButtonProps {
   title: string;
-  onClick?(): void;
   url?: string;
   dismiss?: boolean;
   small?: boolean;
+  type: "internal" | "external";
 }
 
 const Button: NextPage<ButtonProps> = (props) => (
@@ -19,24 +20,21 @@ const Button: NextPage<ButtonProps> = (props) => (
       }
     )}
   >
-    {props.onClick && (
-      <div
-        className="button__wrapper text-md  font-bold"
-        onClick={props.onClick}
-      >
-        {props.title}
-      </div>
-    )}
-
-    {!props.onClick && props.url && (
+    {props.type === "external" && (
       <a
-        className="button__url button__wrapper"
+        className="button__wrapper text-md  font-bold"
         href={props.url}
         target="_blank"
         rel="noopener"
       >
         {props.title}
       </a>
+    )}
+
+    {props.type === "internal" && (
+      <Link href={props.url}>
+        <a className="button__url button__wrapper">{props.title}</a>
+      </Link>
     )}
 
     <style jsx>{`

@@ -13,24 +13,34 @@ import Image from "next/image";
 const Home: NextPage<{ posts: Array<Post> }> = (props) => (
   <div className="">
     <Layout alwaysShowMenu>
-      <div className="grid gap-16 max-w-screen-lg mx-auto mt-32">
+      <div className="grid gap-24 max-w-screen-sm mx-auto">
         {props.posts.map((post) => (
-          <div className="flex space-x-8 items-center" key={post._id}>
-            <Image
-              className="rounded-xl"
-              src={post.poster.url}
-              width={300}
-              height={240}
-            />
-            <div>
-              <h2 className="text-2xl font-bold mb-1">{post.title}</h2>
-              <p className="text-xs mb-4 text-transparent-gray">
+          <div
+            className="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-16 items-center justify-center"
+            key={post._id}
+          >
+            <div className="relative w-full h-48">
+              <Image
+                className="rounded-xl object-cover"
+                src={post.poster.url}
+                layout="fill"
+              />
+            </div>
+            <div className="w-7/12 flex-shrink-0 flex-grow-0">
+              <h2 className="font-extrabold text-4xl font-bold mb-4 text-center sm:text-left">
+                {post.title}
+              </h2>
+              <p className="mb-8 text-center sm:text-left hyphens-auto">
+                {post.description}
+              </p>
+              <Link href={`/text/${post.slug}`}>
+                <a className="font-semibold block text-center sm:text-left">
+                  Read article →
+                </a>
+              </Link>
+              <p className="text-xs mt-1 text-transparent-gray text-center sm:text-left">
                 {formatDistance(new Date(post.published), new Date())} ago
               </p>
-              <p className="mb-4">{post.description}</p>
-              <Link href={`/text/${post.slug}`}>
-                <a className="font-semibold">Read more</a>
-              </Link>
             </div>
           </div>
         ))}

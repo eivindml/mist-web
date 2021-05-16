@@ -1,37 +1,72 @@
 import { NextPage } from "next";
+import Link from "next/link";
+
+interface ButtonProps {
+  url: string;
+  title: string;
+  type?: "external" | "internal";
+}
+
+const Button = (props: ButtonProps) => {
+  if (props.type === "external") {
+    return (
+      <a
+        href={props.url}
+        target="_blank"
+        className="bg-beige p-2 text-beige w-full text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10 block"
+      >
+        {props.title}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={props.url}>
+      <a className="bg-beige p-2 text-beiges text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10 block w-full">
+        {props.title}
+      </a>
+    </Link>
+  );
+};
 
 const Footer: NextPage = () => (
-  <footer className="footer bg-black py-40">
-    <div className="max-w-screen-sm mx-auto text-beige grid grid-cols-2 gap-16 center items-center">
+  <footer className="footer bg-black py-40 px-4">
+    <div className="max-w-screen-sm mx-auto text-beige grid md:grid-cols-2 gap-16 center items-center">
       <div>
-        <ul className="grid grid-cols-2 gap-4">
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Apps
+        <ul className="grid grid-cols-2 gap-4 justify-items-stretch block max-w-sm mx-auto">
+          <li>
+            <Button title="Minutes" url="/minutes" />
           </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Email
+          <li>
+            <Button
+              title="Email"
+              url="mailto:eivindml@icloud.com"
+              type="external"
+            />
           </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Posts
+          <li>
+            <Button title="Texts" url="/text" />
           </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Github
+          <li>
+            <Button
+              title="Github"
+              url="https://github.com/eivindml"
+              type="external"
+            />
           </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Portfolio
+          <li>
+            <Button title="Services" url="/services" />
           </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Twitter
-          </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Services
-          </li>
-          <li className="bg-beige p-2 text-beige w-32 text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10">
-            Instagram
+          <li>
+            <Button
+              title="Twitter"
+              url="https://twitter.com/eivindml"
+              type="external"
+            />
           </li>
         </ul>
       </div>
-      <p className="text-sm">
+      <p className="text-sm text-center md:text-left">
         Site made with Next.js and Sanity.
         <br />
         Mist © 2021. In Oslo, Norway.

@@ -48,18 +48,18 @@ const Values: NextPage = () => {
 
       <div className="max-w-screen-sm mx-auto">
         <div className="values__cell">
-          <h2 className="values__heading max-w-xl">
+          <h2 className="max-w-xl text-black mb-8 text-2xl md:text-4xl font-extrabold text-center sm:text-left">
             All products are handcrafted with love and attention to details.
           </h2>
 
-          <p className="values__body text-sm">
+          <p className="mb-16 text-center sm:text-left">
             An artisan is a skilled craft worker making material objects by
             hand, with a pride in one's own work, and a respect for tools and
             materials. I'm inspired by this tradition, and want to translate
             this into the crafting of digital products with these principles:
           </p>
 
-          <div className="values__items">
+          <div className="grid gap-16 sm:grid-cols-2">
             <Value
               text="We create products, not code. Code is just a means to an end. Keep in mind that you are creating experiences for human beings."
               icon="/Product.png"
@@ -82,39 +82,14 @@ const Values: NextPage = () => {
             />
           </div>
 
-          <div className="values__action">
-            <Button title="Get in touch" onClick={handleOpen} />
+          <div className="mt-24 flex justify-center sm:block">
+            <Button
+              title="Get in touch"
+              url="mailto:eivindml@icloud.com"
+              type="external"
+            />
           </div>
         </div>
-
-        <style jsx>{`
-          .values__heading {
-            font-size: 33px;
-            line-height: 39px;
-            font-weight: 800;
-            margin-bottom: var(--line-height);
-          }
-
-          .values__body {
-            margin-bottom: calc(var(--line-height) * 2);
-          }
-
-          .values__items {
-            display: grid;
-            grid-gap: calc(var(--line-height) * 2);
-            margin-bottom: calc(var(--line-height) * 5);
-          }
-          @media (min-width: 630px) {
-            .values__items {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-
-          .values__action {
-            display: flex;
-            justify-content: center;
-          }
-        `}</style>
       </div>
     </>
   );

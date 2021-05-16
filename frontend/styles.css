@@ -11,6 +11,10 @@
   .rotate-z {
     transform: rotateZ(90deg);
   }
+
+  .hyphens-auto {
+    hyphens: auto;
+  }
 }
 
 :root {
