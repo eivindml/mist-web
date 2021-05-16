@@ -1,51 +1,10 @@
 import { NextPage } from "next";
-import { useState } from "react";
 import Button from "./Button";
 import Value from "./Value";
-import Modal from "./Modal";
-import ModalContent from "./ModalContent";
-
-enum State {
-  Hidden,
-  ShowContact,
-}
 
 const Values: NextPage = () => {
-  const [state, setState] = useState(State.Hidden);
-
-  const handleOpen = () => setState(State.ShowContact);
-  const handleClose = () => setState(State.Hidden);
-
   return (
     <>
-      <Modal
-        show={state !== State.Hidden}
-        handleClose={handleClose}
-        actions={[
-          {
-            title: "Email",
-            url: "mailto:eivindml@icloud.com",
-          },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/eivindml",
-          },
-          {
-            title: "Instagram",
-            url: "https://instagram.com/madebymist",
-          },
-        ]}
-        dismiss={{
-          title: "Dismiss",
-          onClick: handleClose,
-        }}
-      >
-        <ModalContent
-          title="Get in touch."
-          body="If you want to talk, the best way to do that is through email. If you are interested in following the progress of the apps and the company, you can do that through Instagram (where I'll post process images and videos) or Twitter (where I'll post thoughts and conversations)."
-        />
-      </Modal>
-
       <div className="max-w-screen-sm mx-auto">
         <div className="values__cell">
           <h2 className="max-w-xl text-black mb-8 text-2xl md:text-4xl font-extrabold text-center sm:text-left">
