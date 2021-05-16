@@ -1,90 +1,81 @@
 import { NextPage } from "next";
-import Contact from "./Contact";
-import Layout from "./Layout";
+import Link from "next/link";
+
+interface ButtonProps {
+  url: string;
+  title: string;
+  type?: "external" | "internal";
+}
+
+const Button = (props: ButtonProps) => {
+  if (props.type === "external") {
+    return (
+      <a
+        href={props.url}
+        target="_blank"
+        className="bg-beige p-2 text-beige w-full text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10 block"
+      >
+        {props.title}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={props.url}>
+      <a className="bg-beige p-2 text-beiges text-center rounded-xl bg-opacity-5 cursor-pointer ease-in-out duration-200 transform transition hover:scale-105 hover:bg-opacity-10 block w-full">
+        {props.title}
+      </a>
+    </Link>
+  );
+};
 
 const Footer: NextPage = () => (
-  <div className="footer">
-    <Layout>
-      <div className="footer__grid">
-        <div className="footer__cell">
-          <Contact
-            title="Contact"
-            body="Get in touch with me through email ${email}."
-            icon="/contact.png"
-            alt="Icon of an envelope."
-            link={{
-              title: "eivindml@icloud.com",
-              url: "mailto:eivindml@icloud.com",
-              keyword: "${email}",
-            }}
-          />
-        </div>
-
-        <div className="footer__cell">
-          <Contact
-            title="Follow"
-            body="Join me on Instagram to follow the work I do ${instagram}."
-            icon="/follow.png"
-            alt="Icon for Instagram."
-            link={{
-              title: "@eivindml",
-              url: "https://instagram.com/eivindml",
-              keyword: "${instagram}",
-            }}
-          />
-        </div>
-
-        <div className="footer__cell">
-          <Contact
-            title="Visit"
-            body="Visit me at my desk at the co-work space ${greenhouse}."
-            icon="/visit.png"
-            alt="Icon showing a location pin."
-            link={{
-              title: "@greenhouse",
-              url: "https://www.greenhouseoslo.no",
-              keyword: "${greenhouse}",
-            }}
-          />
-        </div>
+  <footer className="footer bg-black py-40 px-4">
+    <div className="max-w-screen-sm mx-auto text-beige grid md:grid-cols-2 gap-16 center items-center">
+      <div>
+        <ul className="grid grid-cols-2 gap-4 justify-items-stretch block max-w-sm mx-auto">
+          <li>
+            <Button title="Minutes" url="/minutes" />
+          </li>
+          <li>
+            <Button
+              title="Email"
+              url="mailto:eivindml@icloud.com"
+              type="external"
+            />
+          </li>
+          <li>
+            <Button title="Texts" url="/text" />
+          </li>
+          <li>
+            <Button
+              title="Github"
+              url="https://github.com/eivindml"
+              type="external"
+            />
+          </li>
+          <li>
+            <Button title="Services" url="/services" />
+          </li>
+          <li>
+            <Button
+              title="Twitter"
+              url="https://twitter.com/eivindml"
+              type="external"
+            />
+          </li>
+        </ul>
       </div>
-    </Layout>
-    <div className="footer__overscroll"></div>
+      <p className="text-sm text-center md:text-left">
+        Site made with Next.js and Sanity.
+        <br />
+        Mist © 2021. In Oslo, Norway.
+      </p>
+    </div>
+    <div className="overscroll"></div>
     <style jsx>{`
-      .footer {
-        background-color: #151714;
-        color: #fffefa;
-        padding: calc(var(--line-height) * 4) 0;
-      }
-      @media (min-width: 670px) {
-        .footer {
-          padding: calc(var(--line-height) * 4) var(--line-height);
-        }
-      }
-
-      .footer__grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-row-gap: calc(var(--line-height) * 2);
-      }
-      @media (min-width: 620px) {
-        .footer__grid {
-          grid-column-gap: calc(var(--line-height) * 2);
-        }
-      }
-
-      .footer__cell {
-        grid-column-start: 1;
-        grid-column: span 10;
-      }
-      @media (min-width: 620px) {
-        .footer__cell {
-          grid-column: span 4;
-        }
-      }
-
-      .footer__overscroll {
-        background-color: #151714;
+      .overscroll {
+        background-color: #121211;
         height: 600px;
         position: fixed;
         bottom: -300px;
@@ -93,7 +84,7 @@ const Footer: NextPage = () => (
         z-index: -1;
       }
     `}</style>
-  </div>
+  </footer>
 );
 
 export default Footer;

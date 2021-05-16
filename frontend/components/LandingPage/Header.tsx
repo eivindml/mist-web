@@ -1,13 +1,16 @@
+import Image from "next/image";
+
 function Header() {
   return (
-    <div className="md:flex md:items-center">
-      <div className="flex-grow-0 flex-shrink-0">
-        <img
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="flex-grow-0 flex-shrink-0 transform hover:scale-105 hover:rotate-12 transition-transform duration-700 ease-in-out z-20">
+        <Image
           src="/minutes-icon.png"
           width={169}
           height={169}
-          className="transform hover:scale-105 hover:rotate-12 transition-transform duration-700 ease-in-out"
+          className=""
           alt="Minutes for iOS and macOS app icon"
+          loading="eager"
         />
       </div>
 
@@ -20,9 +23,6 @@ function Header() {
         </h3>
       </div>
       <style jsx global>{`
-        .header {
-        }
-
         .header__title {
           letter-spacing: 1px;
         }

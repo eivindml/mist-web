@@ -1,0 +1,9 @@
+<svg width="15" height="15" viewBox="0 0 15 15">
+  <g fill="none" fill-rule="evenodd">
+    <line x1="6.5" x2="3.5" y1="7.5" y2="15.5" stroke="#000" stroke-linecap="square" stroke-width="1.5"/>
+    <line x1="8.5" x2="11.5" y1="7.5" y2="15.5" stroke="#000" stroke-linecap="square" stroke-width="1.5"/>
+    <path stroke="#000" stroke-width="1.5" d="M2.63092595,11.0347409 C3.89452429,11.9884197 5.56119096,12.4652591 7.63092595,12.4652591 C9.70066093,12.4652591 11.3673276,11.9884197 12.6309259,11.0347409"/>
+    <line x1="7.5" x2="7.5" y1="3.5" y2=".5" stroke="#000" stroke-linecap="square" stroke-width="1.5"/>
+    <circle cx="7.5" cy="5.5" r="2.75" fill="#A2A2A2" stroke="#000" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -8,16 +8,13 @@ interface ValueProps {
 
 const Value: NextPage<ValueProps> = (props) => (
   <div className="value">
-    <img className="value__icon" src={props.icon} alt={props.alt} />
+    <img
+      className="h-16 mb-4 mx-auto sm:mx-0"
+      src={props.icon}
+      alt={props.alt}
+    />
 
-    <p className="text-sm">{props.text}</p>
-
-    <style jsx>{`
-      .value__icon {
-        height: calc(var(--line-height) * 2);
-        margin-bottom: calc(var(--line-height) * 1);
-      }
-    `}</style>
+    <p className="text-center sm:text-left">{props.text}</p>
   </div>
 );
 

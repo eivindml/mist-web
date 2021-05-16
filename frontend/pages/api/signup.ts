@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import sanity from "lib/sanity";
+import { client } from "lib/sanity";
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,7 +19,7 @@ export default async function handler(
     };
 
     const query = `*[_type == "subscriber" && email == "${email}"]{_id, email}`;
-    const emails = await sanity.fetch(query);
+    const emails = await client.fetch(query);
 
     if (emails.length > 0) {
       /** 409 Resource conflict */
@@ -28,7 +28,7 @@ export default async function handler(
         .end(JSON.stringify({ message: `${email} already exists.` }));
     } else {
       /** 201 Created */
-      await sanity.create(doc);
+      await client.create(doc);
       res.status(201).end(
         JSON.stringify({
           email: email,

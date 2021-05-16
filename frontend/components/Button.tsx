@@ -1,30 +1,28 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import cs from "classnames";
 
 interface ButtonProps {
   title: string;
-  onClick?(): void;
   url?: string;
   dismiss?: boolean;
   small?: boolean;
+  type: "internal" | "external";
 }
 
 const Button: NextPage<ButtonProps> = (props) => (
   <div
-    className={cs("button", {
-      "button--dismiss": props.dismiss,
-      "button--small": props.small,
-    })}
-  >
-    {props.onClick && (
-      <div className="button__wrapper text-sm" onClick={props.onClick}>
-        {props.title}
-      </div>
+    className={cs(
+      "button bg-black text-beige rounded-md transform ease-in-out duration-200 hover:translate-x-1",
+      {
+        "button--dismiss": props.dismiss,
+        "button--small": props.small,
+      }
     )}
-
-    {!props.onClick && props.url && (
+  >
+    {props.type === "external" && (
       <a
-        className="button__url button__wrapper"
+        className="button__wrapper text-md  font-bold"
         href={props.url}
         target="_blank"
         rel="noopener"
@@ -33,32 +31,28 @@ const Button: NextPage<ButtonProps> = (props) => (
       </a>
     )}
 
+    {props.type === "internal" && (
+      <Link href={props.url}>
+        <a className="button__url button__wrapper">{props.title}</a>
+      </Link>
+    )}
+
     <style jsx>{`
       .button {
-        background-color: #027aff;
         display: inline-block;
-        color: white;
-        font-weight: 700;
+
         -webkit-tap-highlight-color: rgba(
           0,
           0,
           0,
           0
         ); // Disable tap highlight square
-        border-radius: 36px;
+
         cursor: pointer;
-        box-shadow: 0 2px 13px rgba(2, 122, 255, 0.3);
-        transition-property: transform box-shadow;
-        transition-duration: 400ms;
-        transition-timing-function: cubic-bezier(0.78, 1.93, 0.37, 0.74);
-        will-change: transform box-shadow;
-        transform: scale(1);
+
+        will-change: transform;
       }
-      .button:hover {
-        box-shadow: 0px 2px 70px rgba(2, 122, 255, 0.3),
-          0px 0px 15px rgba(2, 122, 255, 0.3);
-        transform: scale(1.04);
-      }
+
       .button--dismiss {
         background-color: #777;
         box-shadow: 0 2px 13px rgba(122, 122, 122, 0.3);

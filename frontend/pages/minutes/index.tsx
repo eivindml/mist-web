@@ -34,9 +34,9 @@ const Minutes: NextPage = () => (
       }}
     />
     <div className="home__main m-2 rounded-md p-4 py-8">
-      <div className="max-w-md m-auto">
+      <div className="max-w-lg m-auto">
         <Header />
-        <div className="mt-16">
+        <div className="mt-20">
           <Text />
         </div>
         <div className="mt-16 mb-16">
