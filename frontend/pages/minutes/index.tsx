@@ -44,7 +44,12 @@ const Minutes: NextPage = () => (
         </div>
         <Link href="/">
           <a className="home__logo">
-            <Image src="/logo-small.png" width={51} height={26} />
+            <Image
+              src="/logo-small.png"
+              width={51}
+              height={26}
+              loading="eager"
+            />
           </a>
         </Link>
       </div>
