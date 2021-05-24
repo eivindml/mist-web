@@ -12,7 +12,8 @@ const client = sanityClient({
 });
 
 (async () => {
-  const posts = await client.fetch(`*[_type == "post"] | order(_createdAt asc) {
+  const posts =
+    await client.fetch(`*[_type == "post"] | order(_createdAt desc) {
     _id,
     "slug": slug.current,
     title,

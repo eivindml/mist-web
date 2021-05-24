@@ -30,7 +30,7 @@ export default async (
  * Handler for fetching Posts
  */
 
-const postsQuery = `*[_type == "post"] | order(_createdAt asc) {
+const postsQuery = `*[_type == "post"] | order(_createdAt desc) {
   _id,
   "slug": slug.current,
   title,
