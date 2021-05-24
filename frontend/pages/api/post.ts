@@ -39,7 +39,8 @@ const postQuery = (
   description,
   published,
   article,
-  "poster": poster.asset->
+  "poster": poster.asset->,
+  "posterAlt": poster.caption,
 }[0]`;
 
 export function getPost(slug: string): TaskEither<Error, Post> {

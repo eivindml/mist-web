@@ -37,7 +37,8 @@ const postsQuery = `*[_type == "post"] | order(_createdAt desc) {
   description,
   published,
   article,
-  "poster": poster.asset->
+  "poster": poster.asset->,
+  "posterAlt": poster.caption,
 }`;
 
 export function getPosts(): TaskEither<Error, Array<Post>> {

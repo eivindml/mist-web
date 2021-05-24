@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title><![CDATA[Texts by Eivind Lindbråten]]></title>
-        <description><![CDATA[Your description]]></description>
+        <description><![CDATA[Texts written by Eivind Lindbråten, published at the Mist website madebymist.com.]]></description>
         <link>https://madebymist.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 24 May 2021 10:43:38 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 May 2021 16:39:32 GMT</lastBuildDate>
         <atom:link href="https://madebymist.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 24 May 2021 10:43:38 GMT</pubDate>
+        <pubDate>Mon, 24 May 2021 16:39:32 GMT</pubDate>
         <copyright><![CDATA[2021 Eivind Lindbråten]]></copyright>
         <language><![CDATA[en]]></language>
         <managingEditor><![CDATA[Eivind Lindbråten]]></managingEditor>
         <webMaster><![CDATA[Eivind Lindbråten]]></webMaster>
         <ttl>60</ttl>
+        <item>
+            <title><![CDATA[Weeks updated to version 3.0]]></title>
+            <description><![CDATA[A completely rewrite of Weeks, version 3.0 is out, with lot's of bug fixes and a new Big Sur style icon.]]></description>
+            <link>https://madebymist.com/text/weeks-updated-to-version-3-0</link>
+            <guid isPermaLink="false">fbdfb133-4ded-4996-a7d4-6a2dd4001aaa</guid>
+            <dc:creator><![CDATA[Eivind Linbråten]]></dc:creator>
+            <pubDate>Mon, 24 May 2021 11:00:56 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Hello world]]></title>
             <description><![CDATA[Welcome to my new website and my online notebook. What can you expect from this blog and what will I write about?]]></description>
