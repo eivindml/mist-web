@@ -32,7 +32,7 @@
     "next": "^10.2.2",
     "next-sanity": "^0.1.8",
     "next-seo": "^4.17.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tailwindcss": "^2.1.2",
