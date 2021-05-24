@@ -46,6 +46,13 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta name="author" content="Eivind Lindbråten" />
         <meta name="copyright" content="Eivind Lindbråten" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="RSS Feed for madebymist.com/text"
+          href="/rss.xml"
+        />
+
         {/* <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. --> */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
