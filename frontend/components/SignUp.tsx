@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NextPage } from "next";
 import cs from "classnames";
+import * as Fathom from "fathom-client";
 
 type Status = {
   message: String;
@@ -30,6 +31,7 @@ const SignUp: NextPage = () => {
               "You will hear from us when we have something ready for you. 🥳",
             isError: false,
           });
+          Fathom.trackGoal("6Z1SX0J9", 0);
         } else {
           setStatus({
             message:
