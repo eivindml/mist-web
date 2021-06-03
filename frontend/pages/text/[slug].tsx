@@ -2,11 +2,11 @@ import { GetStaticProps, GetStaticPaths, NextPage } from "next";
 import Layout from "components/Layout";
 import { Post } from "types";
 import { client } from "lib/sanity";
-import BlockContent from "@sanity/block-content-to-react";
 import { NextSeo } from "next-seo";
+import BlockContent from "@sanity/block-content-to-react";
+import { serializers } from "lib/serializers";
 
 const Home: NextPage<{ post: Post }> = (props) => {
-  console.log(props);
   return (
     <Layout alwaysShowMenu>
       <NextSeo
@@ -40,6 +40,7 @@ const Home: NextPage<{ post: Post }> = (props) => {
           blocks={props.post.article}
           projectId="zs25h3xf"
           dataset="production"
+          serializers={serializers}
         />
       </article>
     </Layout>

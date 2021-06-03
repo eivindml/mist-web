@@ -6,6 +6,18 @@ export default {
       type: "block",
     },
     {
+      type: "code",
+      options: {
+        languageAlternatives: [
+          { title: "TypeScript", value: "typescript" },
+          { title: "JavaScript", value: "javascript" },
+          { title: "BASH", value: "bash" },
+          { title: "Swift", value: "swift" },
+        ],
+        theme: "github",
+      },
+    },
+    {
       type: "image",
       fields: [
         {
