@@ -9,6 +9,7 @@ import { pipe } from "fp-ts/lib/pipeable";
 import * as E from "fp-ts/lib/Either";
 import { formatDistance } from "date-fns";
 import Image from "next/image";
+import { client } from "lib/sanity";
 
 interface TextsPageProps {
   posts: Array<Post>;
