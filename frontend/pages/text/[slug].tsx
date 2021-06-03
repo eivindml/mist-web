@@ -6,9 +6,17 @@ import { NextSeo } from "next-seo";
 import BlockContent from "@sanity/block-content-to-react";
 import { serializers } from "lib/serializers";
 
-const Home: NextPage<{ post: Post }> = (props) => {
+interface PageProps {
+  post: any;
+  websiteConfig: {
+    footerMenu: Array<any>;
+    headerMeny: Array<any>;
+  }; // TODO: Type array
+}
+
+const PostPage: NextPage<PageProps> = (props) => {
   return (
-    <Layout alwaysShowMenu>
+    <Layout alwaysShowMenu footerMenu={props.websiteConfig.footerMenu}>
       <NextSeo
         title={`Mist — ${props.post.title}`}
         description={props.post.description}
@@ -74,6 +82,20 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "slug": slug.current,
   }[0]`);
 
+  const websiteConfig = await client.fetch(`*[_id == "websiteConfig"]{
+    ...,
+      _id,
+      _key,
+      "footerMenu": footerMenu[] {
+        title,
+        _key,
+        _type,
+        "slug": reference->slug.current,
+        url
+      }
+    
+  }[0]`);
+
   return {
     props: {
       post,
@@ -81,4 +103,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-export default Home;
+export default PostPage;
