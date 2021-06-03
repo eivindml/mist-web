@@ -10,9 +10,17 @@ import * as E from "fp-ts/lib/Either";
 import { formatDistance } from "date-fns";
 import Image from "next/image";
 
-const Home: NextPage<{ posts: Array<Post> }> = (props) => (
+interface TextsPageProps {
+  posts: Array<Post>;
+  websiteConfig: {
+    footerMenu: Array<any>;
+    headerMeny: Array<any>;
+  }; // TODO: Type array
+}
+
+const Home: NextPage<TextsPageProps> = (props) => (
   <div className="">
-    <Layout alwaysShowMenu>
+    <Layout alwaysShowMenu footerMenu={props.websiteConfig.footerMenu}>
       <div className="grid gap-24 max-w-screen-sm mx-auto">
         {props.posts.map((post) => (
           <div
@@ -55,10 +63,25 @@ export const getStaticProps: GetStaticProps<{
   // TODO: Forenkle API, så vi slipper å gjøre dette over alt
   const posts = await pipe(getPosts(), mapLeft(E.toError))();
 
+  const websiteConfig = await client.fetch(`*[_id == "websiteConfig"]{
+    ...,
+      _id,
+      _key,
+      "footerMenu": footerMenu[] {
+        title,
+        _key,
+        _type,
+        "slug": reference->slug.current,
+        url
+      }
+    
+  }[0]`);
+
   if (isRight(posts)) {
     return {
       props: {
         posts: posts.right,
+        websiteConfig,
       },
     };
   }
