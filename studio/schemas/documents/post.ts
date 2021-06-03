@@ -1,7 +1,10 @@
+import { IoMdPaper } from "react-icons/io";
+
 export default {
   title: "Post",
   name: "post",
   type: "document",
+  icon: IoMdPaper,
   fields: [
     {
       title: "Title",

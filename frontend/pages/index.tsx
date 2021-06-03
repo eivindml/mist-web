@@ -1,11 +1,19 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Sections from "../components/Sections";
 import Values from "../components/Values";
 import { NextSeo } from "next-seo";
+import { client } from "lib/sanity";
 
-const Home: NextPage = () => (
+interface HomePageProps {
+  websiteConfig: {
+    footerMenu: Array<any>;
+    headerMeny: Array<any>;
+  }; // TODO: Type array
+}
+
+const Home: NextPage<HomePageProps> = (props) => (
   <div>
     <NextSeo
       title="Mist"
@@ -32,7 +40,7 @@ const Home: NextPage = () => (
       }}
     />
     <div className="bg-beige">
-      <Layout noTopPadding>
+      <Layout noTopPadding footerMenu={props.websiteConfig.footerMenu}>
         <div className="">
           <Hero />
         </div>
@@ -46,5 +54,27 @@ const Home: NextPage = () => (
     </div>
   </div>
 );
+
+export const getStaticProps: GetStaticProps = async () => {
+  const websiteConfig = await client.fetch(`*[_id == "websiteConfig"]{
+    ...,
+      _id,
+      _key,
+      "footerMenu": footerMenu[] {
+        title,
+        _key,
+        _type,
+        "slug": reference->slug.current,
+        url
+      }
+    
+  }[0]`);
+
+  return {
+    props: {
+      websiteConfig,
+    },
+  };
+};
 
 export default Home;

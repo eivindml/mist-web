@@ -11,6 +11,7 @@ interface LayoutProps {
   children: any;
   alwaysShowMenu?: boolean;
   noTopPadding?: boolean;
+  footerMenu: Array<any>;
 }
 
 const Layout: NextPage<LayoutProps> = (props) => {
@@ -109,7 +110,7 @@ const Layout: NextPage<LayoutProps> = (props) => {
         {props.children}
       </div>
 
-      <Footer />
+      <Footer menu={props.footerMenu} />
       <style jsx>{`
         .l {
           backdrop-filter: blur(7px);

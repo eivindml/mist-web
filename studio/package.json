@@ -25,10 +25,16 @@
     "@sanity/default-login": "^2.10.5",
     "@sanity/desk-tool": "^2.10.5",
     "@sanity/vision": "^2.10.5",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-icons": "^3.11.0",
     "sanity-plugin-vercel-deploy": "^2.0.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^15.9.0",
+    "@types/react": "^17.0.0",
+    "sanity": "^2.2.6",
+    "typescript": "^4.3.2"
+  }
 }
