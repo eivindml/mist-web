@@ -32,6 +32,16 @@ module.exports = {
         "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
         "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
       },
+      keyframes: {
+        "slide-up": {
+          "0%": { transform: "translateY(2rem)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
+        },
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+        "slide-up": "slide-up 1s ease-in-out",
+      },
     },
   },
   variants: {

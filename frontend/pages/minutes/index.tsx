@@ -7,7 +7,7 @@ import Text from "components/LandingPage/Text";
 import { NextSeo } from "next-seo";
 
 const Minutes: NextPage = () => (
-  <div>
+  <div className="rounded-md m-4 bg-beige p-8 relative main">
     <NextSeo
       title="Minutes for iOS and macOS"
       description="A native iOS and macOS time tracker for freelancers and small businesses."
@@ -33,39 +33,38 @@ const Minutes: NextPage = () => (
         cardType: "summary_large_image",
       }}
     />
-    <div className="home__main m-2 rounded-md p-4 py-8">
-      <div className="max-w-lg m-auto">
+
+    <div className="max-w-lg m-auto mt-8 md:mt-24">
+      <div className="animate-slide-up opacity-0 delay-1000 forwards animation-delay-500">
         <Header />
-        <div className="mt-20">
-          <Text />
-        </div>
-        <div className="mt-16 mb-16">
-          <SignUp />
-        </div>
-        <Link href="/">
-          <a className="home__logo">
-            <Image
-              src="/logo-small.png"
-              width={51}
-              height={26}
-              loading="eager"
-            />
-          </a>
-        </Link>
+      </div>
+      <div className="mt-20 animate-slide-up opacity-0 animation-delay-2000 forwards">
+        <Text />
+      </div>
+      <div className="mt-16 mb-16 animate-slide-up opacity-0 forwards animation-delay-3000">
+        <SignUp />
       </div>
     </div>
+    <Link href="/">
+      <a className="home__logo">
+        <Image src="/logo-small.png" width={51} height={26} loading="eager" />
+      </a>
+    </Link>
+
+    <style jsx global>{`
+      body {
+        background-color: white;
+      }
+    `}</style>
     <style jsx>{`
-      .home__main {
-        min-height: calc(100vh - 1rem);
-        background-color: #fffefa;
-        background-color: color(display-p3 1 1 0.98);
-        background-color: #fcfaf4;
+      .main {
+        min-height: calc(100vh - 2em);
       }
 
       .home__logo {
         position: fixed;
-        left: 26px;
-        bottom: 13px;
+        left: 2.5em;
+        bottom: 2em;
         opacity: 0.25;
         transition-properties: opacity transform;
         transition-duration: 350ms;
@@ -74,13 +73,6 @@ const Minutes: NextPage = () => (
       .home__logo:hover {
         opacity: 0.85;
         transform: scale(0.95);
-      }
-
-      :global(body) {
-        background-color: white;
-      }
-
-      :global(:root) {
       }
     `}</style>
   </div>

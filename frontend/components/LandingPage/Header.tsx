@@ -8,9 +8,8 @@ function Header() {
           src="/minutes-icon.png"
           width={169}
           height={169}
-          className=""
           alt="Minutes for iOS and macOS app icon"
-          loading="eager"
+          priority={true}
         />
       </div>
 
@@ -22,12 +21,9 @@ function Header() {
           for iOS and macOS.
         </h3>
       </div>
-      <style jsx global>{`
+      <style jsx>{`
         .header__title {
           letter-spacing: 1px;
-        }
-
-        .header__subtitle {
         }
       `}</style>
     </div>

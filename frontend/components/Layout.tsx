@@ -103,7 +103,7 @@ const Layout: NextPage<LayoutProps> = (props) => {
         </div>
       </div>
       <div
-        className={cs("max-w-screen-xl m-auto px-4 pb-64", {
+        className={cs("max-w-screen-xl m-auto px-4 pb-64 bg-beige", {
           "pt-32": !props.noTopPadding,
         })}
       >
